@@ -1215,7 +1215,7 @@ class Automation {
 				$tblevel = $bdo['f'.$rand];
                 $tbgid = $bdo['f'.$rand.'t'];
                 $tbid = $rand; 
-				if($bid34[$stonemason] != 0){
+				if($bid34[$stonemason] == 0){
 				$needed_cata = round((($battlepart[5] * (pow($tblevel,2) + $tblevel + 1)) / (8 * (round(200 * pow(1.0205,$battlepart[6]))/200))) + 0.5);
 				}else{
                 $needed_cata = round((($battlepart[5] * (pow($tblevel,2) + $tblevel + 1)) / (8 * (round(200 * pow(1.0205,$battlepart[6]))/200) / (1 * $bid34[$stonemason]['attri']/100))) + 0.5);
@@ -1373,7 +1373,7 @@ class Automation {
 				$tblevel = $bdo['f'.$rand];
                 $tbgid = $bdo['f'.$rand.'t'];
                 $tbid = $rand; 
-				if($bid34[$stonemason] != 0){
+				if($bid34[$stonemason] == 0){
 				$needed_cata = round((($battlepart[5] * (pow($tblevel,2) + $tblevel + 1)) / (8 * (round(200 * pow(1.0205,$battlepart[6]))/200))) + 0.5);
 				}else{
                 $needed_cata = round((($battlepart[5] * (pow($tblevel,2) + $tblevel + 1)) / (8 * (round(200 * pow(1.0205,$battlepart[6]))/200) / (1 * $bid34[$stonemason]['attri']/100))) + 0.5);
@@ -1523,7 +1523,7 @@ class Automation {
                 $tblevel = $bdo['f'.$rand];
                 $tbgid = $bdo['f'.$rand.'t'];
                 $tbid = $rand; 
-				if($bid34[$stonemason] != 0){
+				if($bid34[$stonemason] == 0){
 				$needed_cata = round((($battlepart[5] * (pow($tblevel,2) + $tblevel + 1)) / (8 * (round(200 * pow(1.0205,$battlepart[6]))/200))) + 0.5);
 				}else{
                 $needed_cata = round((($battlepart[5] * (pow($tblevel,2) + $tblevel + 1)) / (8 * (round(200 * pow(1.0205,$battlepart[6]))/200) / (1 * $bid34[$stonemason]['attri']/100))) + 0.5);
