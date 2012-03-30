@@ -19,7 +19,7 @@
         	mysql_query("UPDATE " . TB_PREFIX . "users SET password = '" . md5($password) . "' WHERE username = 'Multihunter'");
 			mysql_query("UPDATE " . TB_PREFIX . "users SET password = '" . md5($password) . "' WHERE username = 'Support'");
         	$wid = $admin->getWref(0, 0);
-        	$uid = 0;
+        	$uid = 4;
         	$status = $database->getVillageState($wid);
         	if($status == 0) {
         		$database->setFieldTaken($wid);
