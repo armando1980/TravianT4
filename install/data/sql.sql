@@ -921,7 +921,7 @@ CREATE TABLE IF NOT EXISTS `%PREFIX%heroface` (
 --
 
 INSERT INTO `%PREFIX%heroface` (`uid`, `beard`, `ear`, `eye`, `eyebrow`, `face`, `hair`, `mouth`, `nose`, `color`, `foot`, `helmet`, `horse`, `leftHand`, `rightHand`) VALUES
-(0, 1, 2, 3, 2, 4, 3, 1, 0, 2, 0, 0, 0, 0, 0),
+(4, 1, 2, 3, 2, 4, 3, 1, 0, 2, 0, 0, 0, 0, 0),
 (1, 1, 2, 3, 2, 4, 3, 1, 0, 2, 0, 0, 0, 0, 0),
 (3, 1, 2, 3, 2, 4, 3, 1, 0, 2, 0, 0, 0, 0, 0);
 
