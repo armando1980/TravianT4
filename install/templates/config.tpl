@@ -1,5 +1,4 @@
 <?php
-date_default_timezone_set('Asia/Tehran');
 if(isset($_GET['c']) && $_GET['c'] == 1) {
 echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php check chmod.</span></div><br>";
 }
@@ -36,7 +35,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
     	<tr class="hover">
 			<td>زبان:</td>
 			<td><select name="lang" dir="rtl" class="text">
-		<option value="en">انگلیسی</option><option value="fa" selected="selected">پارسی</option></select></td>
+		<option value="en" selected="selected">انگلیسی</option><option value="fa">پارسی</option></select></td>
 		</tr>
     	<tr class="hover">
 			<td>مدت زمان حمایت:</td>
