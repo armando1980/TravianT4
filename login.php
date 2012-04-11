@@ -1,5 +1,5 @@
 ﻿<?php
-date_default_timezone_set('Asia/Tehran');
+date_default_timezone_set('Europe/Budapest');
 
 include("GameEngine/Account.php");
 include "Templates/html.tpl";
@@ -71,9 +71,9 @@ Element.implement({
 });
 </script>
 <?php
-if(START_DATE > date('m/d/Y')){
+if(START_DATE > date('Y.m.d.')){
 	$loginform = "hide";
-}elseif(START_DATE == date('m/d/Y')){
+}elseif(START_DATE == date('Y.m.d.')){
 	
 	if(START_TIME > date('H:i')){
 	$loginform = "hide";
@@ -197,9 +197,10 @@ Element.implement({
 				<div class="clear"></div>
 			</div>
 		</div>
-<div class="startsIn <?php echo $startin; ?>"><BR /><BR /><BR />
-<?php echo LOGIN_SERVER_START; ?>
-<script language="JavaScript">
+<div class="startsIn <?php echo $startin; ?>"><BR /><BR /><BR /><BR /><BR />
+<center><big><big><big> <?php echo LOGIN_SERVER_START; ?> </big></big></big></center>
+<BR />
+<center><big><big><big><b><font color=red><script language="JavaScript">
 TargetDate = "<?php echo START_DATE; ?> <?php echo START_TIME; ?>";
 CountActive = true;
 CountStepper = -1;
@@ -265,8 +266,8 @@ else
 gsecs = Math.floor(ddiff.valueOf()/1000);
 CountBack(gsecs);
 
-</script>
- <?php echo LOGIN_SERVER_START2; ?></div>
+</script></font></b></big></big></big></center>
+</div>
 <div class="clear">&nbsp;</div>
 </div>
 <div class="clear"></div>

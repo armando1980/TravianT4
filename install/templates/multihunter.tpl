@@ -1,7 +1,7 @@
 ﻿<?php
-	rename("include/constant.php","../GameEngine/config.php");
+    rename("include/constant.php","../GameEngine/config.php");
     rename("include/connection.php","../GameEngine/Database/connection.php");
-	$time = time();
+    $time = time();
 ?>
 <div id="content" class="login">
 
@@ -12,15 +12,15 @@
     
 </style>
 <form action="include/multihunter.php" method="post" id="dataform">
-    <span>رمز عبور مولتی هانتر:</span>
+    <span>Multihunter jelszava:</span>
     <span >
-        <input type="text" name="mhpw" id="mhpw" value="123456789" dir="rtl" class="text">
+        <input type="text" name="mhpw" id="mhpw" value="password" dir="ltr" class="text">
     </span><br /><br />
-   	<center>
+    <center>
     <button type="submit" value="Upgrade level" class="build">
 <div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div>
 <div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div>
-</div><div class="button-contents">تایید</div></div></button>
+</div><div class="button-contents">Tovább</div></div></button>
     </center>
 </form>
     

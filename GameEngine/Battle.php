@@ -54,18 +54,17 @@ class Battle {
 	}
 	
 	private function getBattleHero($uid) {
-        global $database, $session;
+        global $database;
 		$q = "SELECT * FROM ".TB_PREFIX."hero WHERE uid = ".$uid."";
         $heroarray = $database->query_return($q);
-		$tribe = $session->tribe;
-        if($tribe == 1){ $tp = 100; }else{ $tp = 80; }
-        $h_atk = (100+$tp*$heroarray['power'])+$heroarray['itempower'];
-        $h_di = (100+$tp*$heroarray['power'])+$heroarray['itempower'];
-        $h_dc = (100+$tp*$heroarray['power'])+$heroarray['itempower'];
-        $h_ob = $heroarray['offBonus'];
-        $h_db = $heroarray['defBonus'];
+        
+        $h_atk = $heroarray['power'];
+        $h_di = $heroarray['offBonus'];
+        $h_dc = $heroarray['defBonus'];
+        $h_ob = 1 + 0.002 * $heroarray['power'];
+        $h_db = 1 + 0.002 * $heroarray['power'];
 
-        return array('heroid'=>$heroarray['heroid'],'power'=>$h_atk,'power'=>$h_di,'power'=>$h_dc,'offbonus'=>$h_ob,'defbonus'=>$h_db,'health'=>$heroarray['health']);
+        return array('heroid'=>$heroarray['heroid'],'power'=>$h_atk,'off'=>$h_di,'def'=>$h_dc,'power'=>$h_ob,'power'=>$h_db,'health'=>$heroarray['health']);
     }
 	
 	private function simulate($post) {

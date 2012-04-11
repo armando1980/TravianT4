@@ -32,19 +32,19 @@ if($_POST AND $_GET['action'] == 'change_capital') {
     }
     #print '<script language="javascript">location.href="build.php?id=' . $building->getTypeField(26) . '";</script>';
   } else {
-    $error = '<b><font class="error"> اشتباه است</font></b><br />';
+    $error = '<b><font class="error"> Hiba</font></b><br />';
     $_SESSION['error_p'] = $error;
     $_SESSION['time_p'] = time();
     print '<script language="javascript">location.href="build.php?id=' . $building->getTypeField(26) . '&confirm=yes";</script>';
   }
 }
 ?>
-<h1 class="titleInHeader">قصر <span class="level">سطح <?php echo $village->resarray['f'.$id]; ?></span></h1>
+<h1 class="titleInHeader">Palota <span class="level">Szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
 <div id="build" class="gid26">
 <div class="build_desc">
 	<a href="#" onClick="return Travian.Game.iPopup(26,4, 'gid');" class="build_logo"> 
-    <img class="building big white g26" src="img/x.gif" alt="قصر" title="قصر" /> </a>
-	در قصر شاه و ملکه امپراطوری زندگی می کنند. شما در کل امپراطوری فقط یک قصر می توانید داشته باشید. فقط دهکده ای که قصر شما در آن است را می توانید به پایتخت خود تبدیل کنید (شما نمی توانید در یک دهکده قصر و اقامتگاه را با هم داشته باشید).</div>
+    <img class="building big white g26" src="img/x.gif" alt="Palota" title="Palota" /> </a>
+	A palotában a birodalom uralkodója lakik. Ha a faluban van egy palota, akkor a falu kinevezhető főfalunak. </div>
 <?php 
 if ($building->getTypeLevel(26) > 0) {
 include("upgrade.tpl");
@@ -56,7 +56,7 @@ if($village->resarray['f'.$id] >= 10){
 	include ("26_train.tpl");	
 }
 else{
-	echo '<div class="c">برای اینکه شما بتوانید دهکده ای جدید بنا کنید و یا دهکده ای را تصرف کنید به قصر سطح 10 یا 20 نیاز خواهید داشت.</div>';
+	echo '<div class="c">Új falu alapításához szükséged van egy 10-es, 15-ös vagy egy 20-as szintű palotára.</div>';
 }
 
 ?>
@@ -66,25 +66,25 @@ $query = mysql_query('SELECT * FROM `' . TB_PREFIX . 'vdata` WHERE `owner` = ' .
 $data = mysql_fetch_assoc($query);
 if($data['wref'] == $village->wid) {
 ?>
-<p class="none">اینجا پایتخت شماست</p>
+<p class="none">Ez a falu a főfalud</p>
 <?php 
 } else {
   if($_GET['confirm'] == '') {
-    print '<p><a class="arrow" href="?id=' . $building->getTypeField(26) . '&confirm=yes">تغییر پایتخت</a></p>';
+    print '<p><a class="arrow" href="?id=' . $building->getTypeField(26) . '&confirm=yes">Legyen ez a főfalum</a></p>';
   } else {
-    print '<p>برای تغییر پایتخت لطفا رمز عبور خود را وارد کنید:<br />
+    print '<p>Kérjük írja be a jelszavát, ha ezt a falut akarja főfalunak:<br />
     <form method="post" action="build.php?id=' . $building->getTypeField(26) . '&action=change_capital">
      
-     رمز عبور: <input type="password" name="pass" />' . $_SESSION['error_p'] . '<br />
+     Jelszó: <input type="password" name="pass" />' . $_SESSION['error_p'] . '<br />
      <button type="submit" value="ok" name="s1" id="btn_ok" value="ok" class="startTraining">
-                    <div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">تایید</div></div>
+                    <div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Kész</div></div>
                     </button>
     </form>
     </p>';
   }
 }
 } else {
-	echo "<b>قصر در حال ارتقاء است</b>";
+	echo "<b>Palota is being upgraded</b>";
 }
 
 ?>

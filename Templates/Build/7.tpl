@@ -1,24 +1,24 @@
-<h1 class="titleInHeader">ذوب آهن <span class="level">سطح <?php echo $village->resarray['f'.$id]; ?></span></h1>
+<h1 class="titleInHeader">Vasöntöde <span class="level">szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
 <div id="build" class="gid7">
 <div class="build_desc">
 <a href="#" onClick="return Travian.Game.iPopup(7,4);" class="build_logo">
-	<img class="building big white g7" src="img/x.gif" alt="ذوب آهن" title="ذوب آهن" />
+	<img class="building big white g7" src="img/x.gif" alt="Vasöntöde" title="Vasöntöde" />
 </a>
-در ذوب آهن، آهن تولید شده در معدن‌های آهن شما ذوب شده و راحت‌تر قابل استفاده در دهکده خواهد بود. بسته به سطح آن این 
+Itt a vasat olvasztják meg. A szintjétől függően a vasöntödéd akár
 
-ساختمان قادر به افزایش تولید آهن تا 25% می‌باشد.</div>
+25%-kal is növelheti a vastermelésed.</div>
 
 
 	<table cellpadding="1" cellspacing="1" id="build_value">
 		<tr>
-			<th>افزایش تولید فعلی:</th>
+			<th>Termelés növekedés a jelenlegi szinten:</th>
 			<td><b><?php echo $bid7[$village->resarray['f'.$id]]['attri']; ?></b>%</td>
 		</tr>
 		<tr>
 		<?php 
         if(!$building->isMax($village->resarray['f'.$id.'t'],$id)) {
         ?>
-			<th>افزایش تولید در سطح <?php echo $village->resarray['f'.$id]+1; ?>:</th>
+			<th>Termelés növekedés a következő, <?php echo $village->resarray['f'.$id]+1; ?> szinten:</th>
 			<td><b><?php echo $bid7[$village->resarray['f'.$id]+1]['attri']; ?></b>%</td>
             <?php
             }

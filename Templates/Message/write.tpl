@@ -1,6 +1,6 @@
 <div id="messageNavigation">
 	<div id="backToInbox">
-		<a href="nachrichten.php">بازگشت به صندوق پیام</a>
+		<a href="nachrichten.php">Vissza a beérkezett üzenetekhez</a>
 	</div>
 	<div class="clear"></div>
 </div>
@@ -17,7 +17,7 @@
 		</div>
 		<div class="paperContent">
 			<div id="recipient">
-				<div class="header label">گیرنده:</div>
+				<div class="header label">Címzett:</div>
 				<div class="header text">
 <input tabindex="1" class="text" type="text" name="an" id="receiver" value="<?php if(isset($id)) { echo $database->getUserField($id,'username',0); } ?>" maxlength="50" onkeyup="copyElement('receiver')" >
 
@@ -32,7 +32,7 @@
 				<div class="clear"></div>
 			</div>
 			<div id="subject">
-				<div class="header label">موضوع:</div>
+				<div class="header label">Tárgy:</div>
 				<div class="header text"><input tabindex="2" class="text" name="be" id="subject" type="text" value="<?php if(isset($message->reply['topic'])) 
 { 
    if (preg_match("/re([0-9]+)/i",$message->reply['topic'],$c)) 
@@ -74,7 +74,7 @@ echo "RE:".$message->reply['topic']; }} ?>" name="be" onkeyup="copyElement('subj
 			</script>
 						</div>
                         			<div id="send">
-				<button type="submit" value="ارسال" name="s1" id="s1" tabindex="4"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">ارسال</div></div></button>
+				<button type="submit" value="Elküld" name="s1" id="s1" tabindex="4"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Elküld</div></div></button>
                 <input type="hidden" name="ft" value="m2" />
 							</div>
 

@@ -16,8 +16,6 @@
 ##  Source code:   http://www.github.com/ZZJHONS/ZravianX                      ##
 ##                                                                             ##
 #################################################################################
-$sql = mysql_query("SELECT * FROM ".TB_PREFIX."config");
-$result = mysql_query($sql);
 error_reporting(E_ALL);
 if (!file_exists('GameEngine/config.php')) {
 header("Location: install/");

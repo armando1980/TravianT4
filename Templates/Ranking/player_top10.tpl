@@ -13,32 +13,32 @@
 				<div class="container normal">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="statistiken.php?tid=1"><span class="tabItem">دیدکلی</span></a></div>
+					<div class="content"><a href="statistiken.php?tid=1"><span class="tabItem">Áttekintés</span></a></div>
 				</div>
 				<div class="container normal">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="statistiken.php?tid=31"><span class="tabItem">مهاجم</span></a></div>
+					<div class="content"><a href="statistiken.php?tid=31"><span class="tabItem">Támadó</span></a></div>
 				</div>
 				<div class="container normal">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="statistiken.php?tid=32"><span class="tabItem">مدافع</span></a></div>
+					<div class="content"><a href="statistiken.php?tid=32"><span class="tabItem">Védő</span></a></div>
 				</div>
 				<div class="container active">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="statistiken.php?tid=7"><span class="tabItem">تاپ 10</span></a></div>
+					<div class="content"><a href="statistiken.php?tid=7"><span class="tabItem">Top10</span></a></div>
 				</div><div class="clear"></div>
 </div>
 <div id="statLeft" class="top10Wrapper">
-<h4 class="round small  top top10_offs">مهاجمین هفته</h4>
+<h4 class="round small  top top10_offs">Támadó</h4>
 <table cellpadding="1" cellspacing="1" id="top10_offs" class="top10 row_table_data">
 	<thead>
 		<tr>
-			<td>شماره</td>
-			<td>بازیکن</td>
-			<td>امتیاز</td>
+			<td>Nr.</td>
+			<td>Játékosok</td>
+			<td>Pontok</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -84,13 +84,13 @@
     $result = mysql_query("SELECT * FROM ".TB_PREFIX."users WHERE id > 3 ORDER BY dp DESC, id ASC Limit 10");
     $result2 = mysql_query("SELECT * FROM ".TB_PREFIX."users WHERE username = '".$session->username."' ORDER BY dp DESC, id ASC Limit 1");
 ?>
-<h4 class="round small spacer top top10_defs">مدافعین هفته</h4>
+<h4 class="round small spacer top top10_defs">Védő</h4>
 <table cellpadding="1" cellspacing="1" id="top10_defs" class="top10 row_table_data">
 	<thead>
 		<tr>
-			<td>شماره</td>
-			<td>بازیکن</td>
-			<td>امتیاز</td>
+			<td>Nr.</td>
+			<td>Játékosok</td>
+			<td>Pontok</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -139,13 +139,13 @@
     $result = mysql_query("SELECT * FROM ".TB_PREFIX."users WHERE id>3 ORDER BY `clp` DESC, id ASC Limit 10");
     $result2 = mysql_query("SELECT * FROM ".TB_PREFIX."users WHERE username = '".$session->username."' ORDER BY `clp` DESC, id ASC Limit 1");
 ?>
-<h4 class="round small  top top10_climbers">پیشرفت کننده های هفته</h4>
+<h4 class="round small  top top10_climbers">Feltörekvő</h4>
 <table cellpadding="1" cellspacing="1" id="top10_climbers" class="top10 row_table_data">
 	<thead>
 		<tr>
-			<td>شماره</td>
-			<td>بازیکن</td>
-			<td>رتبه ها</td>
+			<td>Nr.</td>
+			<td>Játékosok</td>
+			<td>Rangok</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -191,13 +191,13 @@
     $result = mysql_query("SELECT * FROM ".TB_PREFIX."users WHERE id>3 ORDER BY RR DESC, id ASC Limit 10");
     $result2 = mysql_query("SELECT * FROM ".TB_PREFIX."users WHERE username = '".$session->username."' ORDER BY RR DESC, id ASC Limit 1");
 ?>
-<h4 class="round small spacer top top10_raiders">دزدان هفته</h4>
+<h4 class="round small spacer top top10_raiders">Rabló</h4>
 <table cellpadding="1" cellspacing="1" id="top10_raiders" class="top10 row_table_data">
 	<thead>
 		<tr>
-			<td>شماره</td>
-			<td>بازیکن</td>
-			<td>منابع</td>
+			<td>Nr.</td>
+			<td>Játékosok</td>
+			<td>Nyersanyagok</td>
 		</tr>
 	</thead>
 	<tbody>

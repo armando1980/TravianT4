@@ -6,9 +6,9 @@
                         INNER JOIN ".TB_PREFIX."fdata ON ".TB_PREFIX."fdata.vref = ".TB_PREFIX."vdata.wref
                         WHERE ".TB_PREFIX."fdata.f99t = 40 ORDER BY ".TB_PREFIX."fdata.f99 Desc Limit 13");
 ?>
-<h4 class="round">شگفتی جهان</h4>
+<h4 class="round">Világcsoda</h4>
 <table cellpadding="1" cellspacing="1" id="wonder">
-		<thead><tr><td></td><td>بازیکن</td><td>نام</td><td>اتحاد</td><td>سطح</td></tr></thead>
+		<thead><tr><td></td><td>Játékosok</td><td>Név</td><td>Klán</td><td>Szint</td></tr></thead>
 	<tbody>
         <?php
         $cont = 1;
@@ -24,7 +24,7 @@
                 ?>
                 <?php
                 if($row['username']==Natars){
-                echo "ناتارها";
+                echo "Natar";
                 }
                 ?>
                 </a>

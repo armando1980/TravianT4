@@ -10,9 +10,6 @@
  */
  
 /* Bilder AuÃŸnahme fÃ¼r Iran */
-div.quest div.farm {background-image: url(../../img/q/granary_barracks.jpg);}
-div.quest div.rank1 {background-image: url(../../img/q/quest_alliance.jpg);}
-div.quest div.rank2 {background-image: url(../../img/q/quest_alliance.jpg);}
 input#btn_login {width:97px; background-image: url(b/login.gif);}
 input#btn_signup {width:97px; background-image: url(b/signup.gif);}
 input#btn_ok {width:47px; background-image: url(b/ok.gif);}

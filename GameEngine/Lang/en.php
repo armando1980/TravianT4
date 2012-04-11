@@ -299,6 +299,7 @@ define("PW_GENERATE","All fields required");
 define("EMAIL_NOT_VERIFIED","Email not verified!");
 define("EMAIL_FOLLOW","Follow this link to activate your account.");
 define("VERIFY_EMAIL","Verify Email.");
+define("LOGIN_SERVER_START","Server will start in:");
 
 
 //404.php

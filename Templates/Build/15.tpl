@@ -1,22 +1,22 @@
-<h1 class="titleInHeader">ساختمان اصلی <span class="level">سطح <?php echo $village->resarray['f'.$id]; ?></span></h1>
+<h1 class="titleInHeader">Főépület <span class="level">szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
 <div id="build" class="gid15">
 <div class="build_desc">
 <a href="#" onClick="return Travian.Game.iPopup(15,4);" class="build_logo">
-<img class="building big white g15" src="img/x.gif" alt="ساختمان اصلی" title="ساختمان اصلی" />
-</a>معماران دهکدۀ شما در ساختمان اصلی دهکده زندگی می کنند. هر قدر سطح آن بالا باشد سرعت ساخت ساختمان ها و ارتقاء آنها نیز بیشتر خواهد شد.</div>
+<img class="building big white g15" src="img/x.gif" alt="Főépület" title="Főépület" />
+</a>A főépületben laknak a falu építészei. Minél magasabb szintre van kiépítve a főépület, annál gyorsabban tudsz épületeket építeni.</div>
 
 
 	<table cellpadding="1" cellspacing="1" id="build_value">
 		<tr>
-			<th>زمان ساخت فعلی:</th>
-			<td><b><?php echo round($bid15[$village->resarray['f'.$id]]['attri']); ?></b> درصد</td>
+			<th>Jelenlegi építési idő:</th>
+			<td><b><?php echo round($bid15[$village->resarray['f'.$id]]['attri']); ?></b> százalék</td>
 		</tr>
 		<tr>
 		<?php 
         if(!$building->isMax($village->resarray['f'.$id.'t'],$id)) {
         ?>
-			<th>زمان ساخت در سطح <?php echo $village->resarray['f'.$id]+1; ?>:</th>
-			<td><b><?php echo round($bid15[$village->resarray['f'.$id]+1]['attri']); ?></b> درصد</td>
+			<th>Építési idő <?php echo $village->resarray['f'.$id]+1; ?> szinten:</th>
+			<td><b><?php echo round($bid15[$village->resarray['f'.$id]+1]['attri']); ?></b> százalék</td>
             <?php
             }
             ?>

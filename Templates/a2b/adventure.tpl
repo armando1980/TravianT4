@@ -9,18 +9,18 @@ $time = $generator->procDistanceTime($from,$to,$speed,1);
 $founder = $database->getVillage($village->wid);
 ?>
 
-<h1>ماجراجویی</h1>
+<h1>Kaland</h1>
 				<form method="POST" action="build.php">
 				<input type="hidden" name="a" value="adventure" />
 				<input type="hidden" name="c" value="5" />
 				<input type="hidden" name="h" value="<?php echo $_GET['id']; ?>" />
 				<input type="hidden" name="id" value="39" />
 				<input type="hidden" name="timestamp" value="<?php echo time()+$time ?>" />
-        <span id="text">قهرمان خود را برای ماجراجویی بفرستید. اگر شانس با شما یار باشد، برای قهرمان خود لوازم و تجهیزات پیدا خواهید کرد.</span>
+        <span id="text">Küld a hősödet kalandozni. Ha szerencséd van, a hősöd talál valami felszerelést magának.</span>
 		<table class="troop_details" cellpadding="1" cellspacing="1">
 	<thead>
 		<tr>
-			<td class="role"><a href="karte.php?d=<?php echo $founder['0']; ?>&c=<?php echo $generator->getMapCheck($founder['0']); ?>"><?php echo $village->vname; ?></a></td><td colspan="11">ماجراجویی (<?php echo $adventure['x']; ?>|<?php echo $adventure['y']; ?>)</td>
+			<td class="role"><a href="karte.php?d=<?php echo $founder['0']; ?>&c=<?php echo $generator->getMapCheck($founder['0']); ?>"><?php echo $village->vname; ?></a></td><td colspan="11">Kaland (<?php echo $adventure['y']; ?>|<?php echo $adventure['x']; ?>)</td>
 		</tr>
 	</thead>
 	<tbody class="units">
@@ -33,7 +33,7 @@ $founder = $database->getVillage($village->wid);
                 ?>
 		</tr>
 		<tr>
-			<th>لشکریان</th>
+			<th>Egységek</th>
 				<?php for($i=1;$i<=10;$i++) {
 					echo "<td class=\"none\">0</td>";
 				} ?>
@@ -42,8 +42,8 @@ $founder = $database->getVillage($village->wid);
 	</tbody>
 	<tbody class="infos">
 		<tr>
-			<th>زمان رسیدن</th>
-				<td colspan="11"><img class="clock" src="img/x.gif" alt="مدت زمان" title="مدت زمان" /> <?php echo $generator->getTimeFormat($time); ?></td>
+			<th>Érkezési idő</th>
+				<td colspan="11"><img class="clock" src="img/x.gif" alt="Idő" title="Idő" /> <?php echo $generator->getTimeFormat($time); ?></td>
 		</tr>
 	</tbody>
 </table>
@@ -53,17 +53,17 @@ if($herodetail['dead']==0){
 	if($database->getHUnit($village->wid)){
 ?>
 	<p class="button">
-		<button type="submit" value="ok" name="s1" id="btn_ok"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">ارسال ماجراجویی</div></div></button>
+		<button type="submit" value="ok" name="s1" id="btn_ok"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Kalandra fel</div></div></button>
 	</p>
 <?php }else{ ?>
-<button type="button" title="قهرمان شما در حال حاضر در دهکده نیست." value="ارسال ماجراجویی" class=" disabled"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">ارسال ماجراجویی</div></div></button>
+<button type="button" title="A hősöd nincs a faluban." value="Kalandra fel!" class="disabled"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Kalandra fel</div></div></button>
 <?php } ?>
 <?php }else{ ?>
-<button type="button" title="قهرمان شما مرده است." value="ارسال ماجراجویی" class=" disabled"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">ارسال ماجراجویی</div></div></button>
+<button type="button" title="A hősöd halott." value="Kalandra fel" class="disabled"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Kalandra fel</div></div></button>
 <?php 
 }
 }else{ 
 ?>
-<button type="button" title="اردوگاه بساز" value="ارسال ماجراجویی" class=" disabled"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">ارسال ماجراجویی</div></div></button>
+<button type="button" title="Kiképzés" value="Kalandra fel" class="disabled"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Kalandra fel</div></div></button>
 <?php } ?>
 </form>

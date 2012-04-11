@@ -1,27 +1,25 @@
-<h1 class="titleInHeader">دارالفنون <span class="level">سطح <?php echo $village->resarray['f'.$id]; ?></span></h1>
+<h1 class="titleInHeader">Akadémia <span class="level">szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
 
 <div id="build" class="gid22">
 <div class="build_desc">
 <a href="#" onClick="return Popup(22,4);" class="build_logo">
 
-	<img class="building big white g22" src="img/x.gif" alt="دارالفنون" title="دارالفنون" />
+	<img class="building big white g22" src="img/x.gif" alt="Akadémia" title="Akadémia" />
 </a>
-در دارالفنون، نیروهای جدیدی می توانید تحقیق کنید. هر قدر سطح آن بالا باشد قادر به تحقیق نیروهای بهتری خواهید بود.
-<br /><br />
-بعد از تحقیق نیرو در دارالفنون می توانید آن نیرو را در این دهکده بسازید.</div>
+Az akadémián tudsz új egységeket kifejleszteni. <br><br>Minél jobban ki van építve annál jobb egységeket tudsz kiképezni.</div>
 <?php
-include("upgrade.tpl"); ?>
+include("upgrade.tpl");
+?>
 <div class="clear"></div>
 
 <?php
 	if ($building->getTypeLevel(22) > 0) {
 		include("22_".$session->tribe.".tpl");
 	} else {
-		echo "<p><b>نیروی جدیدی برای تحقیق کردن وجود ندارد.</b><br></p>\n";
+		echo "<p><b>Nincs fejleszthető egység</b><br></p>\n";
 	}
-
-	
 ?>
+
          </div>
 <div class="clear">&nbsp;</div>
-    <div class="clear"></div>
+<div class="clear"></div>

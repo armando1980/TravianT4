@@ -1,2 +1,2 @@
-<h1>پروفایل بازیکن</h1>
-<p>بازیکن یافت نشد</p>
+<h1>Játékos Profil</h1>
+<p>Játékos nem található</p>

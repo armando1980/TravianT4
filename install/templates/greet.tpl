@@ -1,9 +1,9 @@
     <div class="headline"><center>
-        <span class="f16 c5">TravianX Installation Script</span>
+        <span class="f16 c5">TravianX Telepítés</span>
     </center></div>
 
     <div><font color="red"><center>
-           Version: BETA 4
+           Version: BETA 4.1 (HUN)
     </font></center></div>
     <br>
 
@@ -35,7 +35,7 @@
         <button type="button" value="Upgrade level" class="build" onclick="window.location.href = '?s=1'; return false;">
 <div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div>
 <div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div>
-</div><div class="button-contents">بعدی</div></div></button>
+</div><div class="button-contents">Tovább</div></div></button>
         </form>
     </div>
 

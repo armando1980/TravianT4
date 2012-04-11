@@ -1,22 +1,22 @@
-<h1 class="titleInHeader">اقامتگاه <span class="level">سطح <?php echo $village->resarray['f'.$id]; ?></span></h1>
+<h1 class="titleInHeader">Rezidencia <span class="level">Szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
 <div id="build" class="gid25">
 <div class="build_desc">
         <a href="#" onClick="return Travian.Game.iPopup(25,4, 'gid');" class="build_logo">
-        <img class="building big white g25" src="img/x.gif" alt="اقامتگاه" title="اقامتگاه" /> </a>
-        اقامتگاه قصر کوچکی است و هنگامی که پادشاه و یا ملکه از دهکده دیدن می کنند در آن می مانند. اقامتگاه از دهکده در مقابل افرادی که قصد تسخیر ان را دارند محافظت می کند.</div>
+        <img class="building big white g25" src="img/x.gif" alt="Rezidencia" title="Rezidencia" /> </a>
+        A rezidencia egy kis kastély, ahol az uralkodó tartózkodik, ha látogatóba érkezik. A rezidencia megléte megakadályozza a támadókat, hogy elfoglalják a falut.</div>
 
 <?php
 include("upgrade.tpl");
 include("25_menu.tpl"); ?>
-<h4>دهکده های بنا یا تسخیر شده توسط این دهکده</h4>
+<h4>A falu terjeszkedése</h4>
 <table cellpadding="1" cellspacing="1" id="expansion">
 <thead>
 <tr>
-	<td colspan="2">دهکده</td>
-	<td>بازیکن</td>
-	<td>جمعیت</td>
-	<td>مختصات</td>
-	<td>تاریخ</td>
+	<td colspan="2">Falu</td>
+	<td>Játékos</td>
+	<td>Népesség</td>
+	<td>Koordináta</td>
+	<td>Időpont</td>
 </tr></thead>
 <tbody>
 <?php
@@ -39,14 +39,14 @@ echo '
 <td class="vil"><a href="karte.php?d='.${'slot'.$i}.'&c='.$generator->getMapCheck(${'slot'.$i}).'">'.$vname.'</a></td>
 <td class="pla"><center><a href="spieler.php?uid='.$owner.'">'.$ownername.'</a></center></td>
 <td class="ha"><center>'.$pop.'</center></td>
-<td class="aligned_coords"><center><a href="karte.php?d='.${'slot'.$i}.'&c='.$generator->getMapCheck(${'slot'.$i}).'">('.$coor['x'].'|'.$coor['y'].')</center></a></td>
-<td class="dat"><center>'.date('d/m/Y',$vcreated).'</center></td>
+<td class="aligned_coords"><center><a href="karte.php?d='.${'slot'.$i}.'&c='.$generator->getMapCheck(${'slot'.$i}).'">('.$coor['y'].'|'.$coor['x'].')</center></a></td>
+<td class="dat"><center>'.date('Y.m.d.',$vcreated).'</center></td>
 </tr>';
 		}
 	}
 }
 else{
-echo '<tr><td colspan="6" class="none">هیچ دهکدۀ دیگری توسط این دهکده تسخیر و یا بنا نشده است.</td></tr>';
+echo '<tr><td colspan="6" class="none">Ebből a faluból még nem alapítottak/foglaltak el új falut.</td></tr>';
 }
 ?>
 </tbody></table></div>
