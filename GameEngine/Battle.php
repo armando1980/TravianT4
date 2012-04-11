@@ -58,11 +58,11 @@ class Battle {
 		$q = "SELECT * FROM ".TB_PREFIX."hero WHERE uid = ".$uid."";
         $heroarray = $database->query_return($q);
         
-        $h_atk = $heroarray['power'];
-        $h_di = $heroarray['offBonus'];
-        $h_dc = $heroarray['defBonus'];
+        $h_atk = (100+$tp*$heroarray['power'])+$heroarray['itempower'];
+        $h_di = $heroarray['offBonus']/5;
+        $h_dc = $heroarray['defBonus']/5;
         $h_ob = 1 + 0.002 * $heroarray['power'];
-        $h_db = 1 + 0.002 * $heroarray['power'];
+        $h_db = 1 + 0.002 * ((100+$tp*$heroarray['power'])+$heroarray['itempower']);
 
         return array('heroid'=>$heroarray['heroid'],'power'=>$h_atk,'off'=>$h_di,'def'=>$h_dc,'power'=>$h_ob,'power'=>$h_db,'health'=>$heroarray['health']);
     }

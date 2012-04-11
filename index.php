@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="gpack/travian_homepage/lang/en/compact.css"/>
 	<meta name="content-language" content="<?php echo LANG;?>"/>
 	<meta http-equiv="imagetoolbar" content="no"/>
-	<script type="text/javascript" src="crypt.js?1302263420"></script>
+	<script type="text/javascript" src="crypt1.js?1302263420"></script>
 	<style type="text/css">
 	/*<![CDATA[*/
 		div.c1 {left: 274px; top: 100px; display: block; visibility: visible}
