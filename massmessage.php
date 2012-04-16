@@ -191,7 +191,6 @@ function toggleDisplay(e){
 	</div>
 <?php include("Templates/header.tpl"); ?>
 <div id="mid">
-<?php include("Templates/menu.tpl"); ?>
 
 <div id="content"  class="login">
 <?php if (@!$NextStep && @!$NextStep2 && @!$done){?>

@@ -19,13 +19,13 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
     
 </style>
 <form action="include/oasis.php" method="post" id="dataform">
-    <span>Oázis csapatok létrehozása:</span>
+    <span>ساخت لشکریان آبادی ها:</span>
     
     <center>
     <button type="submit" value="Upgrade level" class="build">
 <div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div>
 <div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div>
-</div><div class="button-contents">Tovább</div></div></button>
+</div><div class="button-contents">تایید</div></div></button>
     </center>
 </form>
     

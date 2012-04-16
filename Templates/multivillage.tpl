@@ -1,6 +1,6 @@
 ﻿<div id="villageList" class="listing">
 <div class="head">
-	<a href="dorf3.php" accesskey="9" title="Falu áttekintés"><?php echo MULTI_V_HEADER; ?>:</a> 
+	<a href="dorf3.php" accesskey="9" title="Village Overview"><?php echo MULTI_V_HEADER; ?>:</a> 
 </div> 
 <div class="list"> 
 	<ul>        

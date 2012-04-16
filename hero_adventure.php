@@ -65,7 +65,6 @@ if($message->unread) {
 </div> 
 </div>
 					<div id="mid">
-<?php include("Templates/menu.tpl"); ?>
 
 												<div class="clear"></div> 
 						<div id="contentOuterContainer"> 
@@ -73,28 +72,28 @@ if($message->unread) {
 
 <div class="contentContainer">
 <div id="content" class="hero_adventure">
-<h1 class="titleInHeader">Hős</h1>
+<h1 class="titleInHeader">Hero</h1>
 
 <div class="contentNavi subNavi">
 				<div class="container normal">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="hero_inventory.php"><span class="tabItem">Tulajdonságok</span></a></div>
+					<div class="content"><a href="hero_inventory.php"><span class="tabItem">Attributes</span></a></div>
 				</div>
 				<div class="container normal">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="hero.php"><span class="tabItem">Hős készítő</span></a></div>
+					<div class="content"><a href="hero.php"><span class="tabItem">Appearance</span></a></div>
 				</div>
 				<div class="container active">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="hero_adventure.php"><span class="tabItem">Kaland</span></a></div>
+					<div class="content"><a href="hero_adventure.php"><span class="tabItem">Adventures</span></a></div>
 				</div>
 				<div class="container normal">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="hero_auction.php"><span class="tabItem">Árverések</span></a></div>
+					<div class="content"><a href="hero_auction.php"><span class="tabItem">Auctions</span></a></div>
 				</div><div class="clear"></div>
 		</div><script type="text/javascript">
 					window.addEvent('domready', function()
@@ -108,10 +107,10 @@ if($message->unread) {
 <table cellspacing="1" cellpadding="1">
 	<thead>
 		<tr>
-			<th class="location" colspan="2">Hely</th>
-			<th class="moveTime">Időtartam</th>
-			<th class="difficulty">Veszély</th>
-			<th class="timeLeft">Maradék idő</th>
+			<th class="location" colspan="2">Location</th>
+			<th class="moveTime">Time</th>
+			<th class="difficulty">Difficulty</th>
+			<th class="timeLeft">Lime Left</th>
 			<th class="goTo">Link</th>
 		</tr>
 	</thead>
@@ -149,22 +148,22 @@ switch($type) {
 case 1:
 case 2:
 case 3:
-$tname =  "Erdő";
+$tname =  "forest";
 break;
 case 4:
 case 5:
 case 6:
-$tname =  "Mező";
+$tname =  "field";
 break;
 case 7:
 case 8:
 case 9:
-$tname =  "Hegység";
+$tname =  "mountain";
 break;
 case 10:
 case 11:
 case 12:
-$tname =  "Tenger";
+$tname =  "sea";
 break;
 }
 
@@ -184,7 +183,7 @@ break;
 		$outputList .= "<td class='difficulty'><img src='img/x.gif' class='adventureDifficulty0' title='Veszélyes' /></td>";	
 	}
 	$outputList .= "<td class=\"timeLeft\"><span id=\"timer".$timer."\">".$generator->getTimeFormat($row['time']-time())."</span></td>";
-	$outputList .= "<td class=\"goTo\"><a class=\"gotoAdventure arrow\" href=\"a2b.php?id=".$row['wref']."&h=1\">A kalandhoz</a></td></tr>";	
+	$outputList .= "<td class=\"goTo\"><a class=\"gotoAdventure arrow\" href=\"a2b.php?id=".$row['wref']."&h=1\">To the Adventure</a></td></tr>";	
     $timer++;
 	}
 }

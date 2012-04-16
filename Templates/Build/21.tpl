@@ -1,8 +1,8 @@
-<h1 class="titleInHeader">Műhely <span class="level">szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
+﻿<h1 class="titleInHeader">Workshop <span class="level"> Level <?php echo $village->resarray['f'.$id]; ?></span></h1>
 <div id="build" class="gid21"><div class="build_desc">
 <a href="#" onClick="return Travian.Game.iPopup(21,4, 'gid');" class="build_logo"> 
 <img class="building big white g21" src="img/x.gif" alt="Műhely" title="Műhely" /> </a>
-A műhelyben városromboló eszközöket lehet építeni, katapultot, faltörő kost. Magasabb szintű épület esetén az építési idő csökken. Az építhető harci egységek technológiáját ki kell fejleszteni előbb az akadémiában</div>
+In the workshop siege engines like catapults and rams can be built. The higher its level the faster units are produced.</div>
 <?php
 include("upgrade.tpl");
 if ($building->getTypeLevel(21) > 0) { ?>
@@ -40,7 +40,7 @@ if ($building->getTypeLevel(21) > 0) { ?>
 						<div class=\"tit\">
 							<a href=\"#\" onclick=\"return Travian.Game.iPopup($i,1);\"><img class=\"unit u$i\" src=\"img/x.gif\" alt=\"Paladin\"></a>
 							<a href=\"#\" onclick=\"return Travian.Game.iPopup($i,1);\">".$technology->getUnitName($i)."</a>
-							<span class=\"furtherInfo\">(Jelenlegi: ".$village->unitarray['u'.$i].")</span>
+							<span class=\"furtherInfo\">(Avalaible: ".$village->unitarray['u'.$i].")</span>
 						</div>
                         <div class=\"showCosts\">
                         <span class=\"resources r1\"><img class=\"r1\" src=\"img/x.gif\" alt=\"Fa\">".${'u'.$i}['wood']."</span>
@@ -61,15 +61,15 @@ if ($building->getTypeLevel(21) > 0) { ?>
                 }
             }
             if($success == 0) {
-	echo "<tr><td colspan=\"3\"><div class=\"none\"><center>Fejlesszen egységeket az akadémiában</center></div></td></tr>";
+	echo "<tr><td colspan=\"3\"><div class=\"none\"><center>Units need to be researched</center></div></td></tr>";
             }
             ?>
 </div><div class="clear"></div>
-			<button type="submit" value="ok" name="s1" id="btn_train" value="ok" class="startTraining"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Kiképzés</div></div></button>
+			<button type="submit" value="ok" name="s1" id="btn_train" value="ok" class="startTraining"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Train</div></div></button>
 		</form>
 <?php
 	    } else {
-			echo "<b>A kiképzés az épület felépítése után elkezdhető.</b><br>\n";
+			echo "<b>Units need to be researched</b><br>\n";
 		}
 
     $trainlist = $technology->getTrainingList(3);
@@ -78,9 +78,9 @@ if ($building->getTypeLevel(21) > 0) { ?>
     	echo "
     <table cellpadding=\"1\" cellspacing=\"1\" class=\"under_progress\">
 		<thead><tr>
-			<td>Kiképzés alatt</td>
-			<td>Időtartam</td>
-			<td>Kész</td>
+			<td>Unit alatt</td>
+			<td>Duration</td>
+			<td>Finish</td>
 		</tr></thead>
 		<tbody>";
         $TrainCount = 0;
@@ -102,7 +102,7 @@ if ($building->getTypeLevel(21) > 0) { ?>
             }
             echo $time[1];
 		} ?>
-		</tr><tr class="next"><td colspan="3">Következő egység <span id="timer2"><?php echo $NextFinished; ?></span> múlva lesz kész</td></tr>
+		</tr><tr class="next"><td colspan="3">Next Unit finished in <span id="timer2"><?php echo $NextFinished; ?></span> </td></tr>
         </tbody></table>
     <?php }
 ?>  

@@ -1,10 +1,10 @@
-<?php 
+﻿<?php 
 $varmedal = $database->getProfileMedal($session->uid);  ?>
 <form action="spieler.php" method="POST">
     <input type="hidden" name="ft" value="p1" />
     <input type="hidden" name="uid" value="<?php echo $session->uid; ?>" />
     <input type="hidden" name="id" value="<?php echo $id; ?>" />
-		<h4 class="round">Részletek:</h4>
+		<h4 class="round">Edit Profile</h4>
 	<table cellpadding="1" cellspacing="1" id="editDetails" class="transparent">
 		<tbody>
 			<tr>
@@ -17,49 +17,49 @@ $varmedal = $database->getProfileMedal($session->uid);  ?>
    }
    ?>
 
-				<th class="birth">Születésnap:</th>
+				<th class="birth">Birthday</th>
 				<td class="birth">
 					
 					<input tabindex="3" type="text" name="jahr" value="<?php echo $bday[0]; ?>" maxlength="4" class="text year">
                     <select tabindex="2" name="monat" class="dropdown">
-<option value="0"></option><option value="1" <?php if($bday[1] == 1) { echo "selected"; } ?>>Január</option><option value="2"<?php if($bday[1] == 2) { echo "selected"; } ?>>Február</option><option value="3"<?php if($bday[1] == 3) { echo "selected"; } ?>>Március</option><option value="4"<?php if($bday[1] == 4) { echo "selected"; } ?>>Április</option><option value="5"<?php if($bday[1] == 5) { echo "selected"; } ?>>Május</option><option value="6"<?php if($bday[1] == 6) { echo "selected"; } ?>>Június</option><option value="7"<?php if($bday[1] == 7) { echo "selected"; } ?>>Július</option><option value="8"<?php if($bday[1] == 8) { echo "selected"; } ?>>Augusztus</option><option value="9"<?php if($bday[1] == 9) { echo "selected"; } ?>>Szeptember</option><option value="10"<?php if($bday[1] == 10) { echo "selected"; } ?>>Október</option><option value="11"<?php if($bday[1] == 11) { echo "selected"; } ?>>November</option><option value="12"<?php if($bday[1] == 12) { echo "selected"; } ?>>December</option>                	</select>
+<option value="0"></option><option value="1" <?php if($bday[1] == 1) { echo "selected"; } ?>>January</option><option value="2"<?php if($bday[1] == 2) { echo "selected"; } ?>>Febuary</option><option value="3"<?php if($bday[1] == 3) { echo "selected"; } ?>>Március</option><option value="4"<?php if($bday[1] == 4) { echo "selected"; } ?>>Ápril</option><option value="5"<?php if($bday[1] == 5) { echo "selected"; } ?>>May</option><option value="6"<?php if($bday[1] == 6) { echo "selected"; } ?>>June</option><option value="7"<?php if($bday[1] == 7) { echo "selected"; } ?>>July</option><option value="8"<?php if($bday[1] == 8) { echo "selected"; } ?>>August</option><option value="9"<?php if($bday[1] == 9) { echo "selected"; } ?>>September</option><option value="10"<?php if($bday[1] == 10) { echo "selected"; } ?>>October</option><option value="11"<?php if($bday[1] == 11) { echo "selected"; } ?>>November</option><option value="12"<?php if($bday[1] == 12) { echo "selected"; } ?>>December</option>                	</select>
                     <input tabindex="1" class="text day" type="text" name="tag" value="<?php echo $bday[2]; ?>" maxlength="2">
                     </td>
-				<th class="gender" rowspan="2">Nem:</th>
+				<th class="gender" rowspan="2">Gender</th>
 				<td class="gender" rowspan="2">
 					<label>
-						<input class="radio" type="radio" name="mw" value="0" <?php if($session->userinfo['gender'] == 0) { echo "checked"; } ?>> nincs megadva</label><br>
+						<input class="radio" type="radio" name="mw" value="0" <?php if($session->userinfo['gender'] == 0) { echo "checked"; } ?>> Not Specified</label><br>
 					<label>
-						<input class="radio" type="radio" name="mw" value="1" tabindex="5" <?php if($session->userinfo['gender'] == 1) { echo "checked"; } ?>> férfi</label><br>
+						<input class="radio" type="radio" name="mw" value="1" tabindex="5" <?php if($session->userinfo['gender'] == 1) { echo "checked"; } ?>> Male</label><br>
 					<label>
-						<input class="radio" type="radio" name="mw" value="2" <?php if($session->userinfo['gender'] == 2) { echo "checked"; } ?>> nő</label>
+						<input class="radio" type="radio" name="mw" value="2" <?php if($session->userinfo['gender'] == 2) { echo "checked"; } ?>>Female</label>
 				</td>
 			</tr>
 			<tr>
-				<th>Lakhely:</th>
+				<th>Location</th>
 				<td><input tabindex="4" type="text" name="ort" value="<?php echo $session->userinfo['location']; ?>" maxlength="30" class="text">
 				</td>
 			</tr>
 		</tbody>
 	</table>
 
-		<h4 class="round spacer">Leírás:</h4>
+		<h4 class="round spacer">Description</h4>
 	<textarea tabindex="6" style="text-align:center;" class="editDescription editDescription1" name="be1"><?php echo $session->userinfo['desc2']; ?></textarea>
 	<textarea tabindex="7" style="text-align:center;" class="editDescription editDescription2" name="be2"><?php echo $session->userinfo['desc1']; ?></textarea>
 	<div class="clear"></div>
 
 				<div class="switchWrap">
-			<div class="openedClosedSwitch switchClosed" id="switchMedals">Medálok</div>
+			<div class="openedClosedSwitch switchClosed" id="switchMedals">Medals</div>
 			<div class="clear"></div>
 		</div>
 
 		<table cellpadding="1" cellspacing="1" id="medals" class="hide">
 			<thead>
 				<tr>
-					<td>Kategória</td>
-					<td>Rang</td>
-					<td>Hét</td>
-					<td>BB-Kód</td>
+					<td>Category/td>
+					<td>Rank</td>
+					<td>Week</td>
+					<td>BB-code</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -137,15 +137,15 @@ INDELING CATEGORIEEN:
 			</tbody>
 		</table>
 	
-		<h4 class="round spacer">Falvak</h4>
+		<h4 class="round spacer">Villages</h4>
 
 	<table cellpadding="1" cellspacing="1" id="villages">
 		<thead>
 			<tr>
-				<th class="name">Név</th>
-                <th>Oázisok</th>
-				<th>Lakosság</th>
-                <th>Koordináták</th>
+				<th class="name">Name</th>
+                <th>Oasis</th>
+				<th>Popualtion</th>
+                <th>Coordiantes</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -215,7 +215,7 @@ break;
 	</table>
 
 	<div class="submitButtonContainer">
-		<button type="submit" value="Mentés" name="s1" id="btn_ok"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Mentés</div></div></button>	</div>
+		<button type="submit" value="Mentés" name="s1" id="btn_ok"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Save</div></div></button>	</div>
 </form><script type="text/javascript">
 	window.addEvent('domready', function()
 	{

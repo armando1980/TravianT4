@@ -1,10 +1,10 @@
-<h1 class="titleInHeader">Nagy Kaszárnya <span class="level">Szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
+﻿<h1 class="titleInHeader">Great Barracks <span class="level">Szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
 <div id="build" class="gid29">
 <div class="build_desc">
 <a href="#" onClick="return Travian.Game.iPopup(29,4);" class="build_logo">
     <img class="building big white g29" src="img/x.gif" alt="Nagy kaszárnya" title="Nagy kaszárnya" />
 </a>
-A Nagy Kaszárnya felépítésével egyszerre két kaszárnya is lehet egy faluban, az egységek képzési költsége azonban az eredeti ár háromszorosa. A közönséges kaszárnyával kombinálva, kétszer gyorsabban képezhetõk egyes falvakban az egységek.</div>
+The great barracks allows the training of additional troops. The troops cost three times as much, however. In conjunction with the normal barracks, twice as many troops can be built in the same amount of time.</div>
 <?php 
 include("upgrade.tpl");
 ?>
@@ -18,7 +18,7 @@ include("upgrade.tpl");
                     include("29_train.tpl");
                 ?>
             <div class="clear"></div></div>
-    <button type="submit" value="ok" name="s1" id="btn_train" value="ok" class="startTraining"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Kiképzés</div></div></button>
+    <button type="submit" value="ok" name="s1" id="btn_train" value="ok" class="startTraining"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Train</div></div></button>
     <?php
     } else {
         echo "<b>Training can commence when great barracks are completed.</b><br>\n";
@@ -26,12 +26,12 @@ include("upgrade.tpl");
     $trainlist = $technology->getTrainingList(5);
     if(count($trainlist) > 0) {
         echo "
-        <h4 class=\"round spacer\">Kiképzés</h4>
+        <h4 class=\"round spacer\">Train</h4>
     <table cellpadding=\"1\" cellspacing=\"1\" class=\"under_progress\">
         <thead><tr>
-            <td>Képzés</td>
-            <td>Időtartam</td>
-            <td>Kész</td>
+            <td>Unit</td>
+            <td>Duration</td>
+            <td>Finished</td>
         </tr></thead>
         <tbody>";
         $TrainCount = 0;
@@ -50,7 +50,7 @@ include("upgrade.tpl");
             $time = $generator->procMTime($train['commence']+($train['eachtime']*$train['amt']));
             echo $time[1]." óra";
         } ?>
-        </tr><tr class="next"><td colspan="3">A következő egység <span id="timer2"><?php echo $NextFinished; ?></span> múlva lesz kész</td></tr>
+        </tr><tr class="next"><td colspan="3">The Next unit ready in <span id="timer2"><?php echo $NextFinished; ?></span> </td></tr>
         </tbody></table>
     <?php } ?>
 </p></div>

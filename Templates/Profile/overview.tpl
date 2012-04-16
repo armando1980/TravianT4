@@ -13,8 +13,8 @@ foreach($varray as $vil) {
 }
 		
 ?>
-<h1 class="titleInHeader">Játékos profil - <?php echo $displayarray['username']; ?></h1>
-<h4 class="round">Részletek:</h4>
+
+<h4 class="round">Information</h4>
 <?php
     if($_GET['uid']==2){
     echo '<img src="gpack/travian_Travian_4.0_41/img/t/t10_2.jpg" border="0">';
@@ -24,30 +24,30 @@ foreach($varray as $vil) {
 ?>
 <table cellpadding="1" cellspacing="1" id="details" class="transparent">
 	<tr>
-		<th>Rang:</th>
+		<th>Rank</th>
 		<td><?php echo $ranking->getUserRank($displayarray['username']); ?></td>
 	</tr>
 	<tr>
-		<th>Nép:</th>
+		<th>Tribe</th>
 		<td><?php 
                 if($displayarray['tribe'] == 1) {
-                echo "Római";
+                echo "Roman";
                 }
                 else if($displayarray['tribe'] == 2) {
-                echo "Germán";
+                echo "Teuton";
                 }
                 else if($displayarray['tribe'] == 3) {
-                echo "Gall";
+                echo "Gaul";
                 }
 				else if($displayarray['tribe'] == 4) {
-                echo "Természet";
+                echo "Nature";
                 
                 }else if($displayarray['tribe'] == 5) {
                 echo "Natar";
                 }				?></td>
 	</tr>
 	<tr>
-		<th>Klán:</th>
+		<th>Alliance</th>
 		<td><?php if($displayarray['alliance'] == 0) {
                 echo "-";
                 }
@@ -57,11 +57,11 @@ foreach($varray as $vil) {
                 } ?></td>
 	</tr>
 	<tr>
-		<th>Falvak:</th>
+		<th>Villages</th>
 		<td><?php echo count($varray);?></td>
 	</tr>
 	<tr>
-		<th>Népesség:</th>
+		<th>Population</th>
 		<td><?php echo $totalpop;?></td>
 	</tr>
     <?php 
@@ -72,7 +72,7 @@ foreach($varray as $vil) {
 				elseif ((date('m') - substr($displayarray['birthday'],5,2)) == 0){
 					if(date('d') < substr($displayarray['birthday'],8,2)){$age --;}
 				}
-            echo "<tr><th>Kor:</th><td>$age</td></tr>";
+            echo "<tr><th>Birthday</th><td>$age</td></tr>";
             }
 			//Gender
             if(isset($displayarray['gender']) && $displayarray['gender'] != 0) {
@@ -88,9 +88,9 @@ foreach($varray as $vil) {
         	<?php
             	if($_GET['uid'] == $session->uid) {
                 	if($session->is_sitter){
-            			echo "<td colspan=\"2\"> <span class=\"a arrow disabled\">Profil módosítása</span></td>";
+            			echo "<td colspan=\"2\"> <span class=\"a arrow disabled\">Edit Profile</span></td>";
                     }else{
-                    	echo "<td colspan=\"2\"> <a class=\"arrow\" href=\"spieler.php?s=1\">Profil módosítása</a></td>";
+                    	echo "<td colspan=\"2\"> <a class=\"arrow\" href=\"spieler.php?s=1\">Edit Profile</a></td>";
                     }
                 } else {
             		echo "<td colspan=\"2\"> <a class=\"message messageStatus messageStatusUnread\" href=\"nachrichten.php?t=1&amp;id=".$_GET['uid']."\">Üzenet írása</a></td>";
@@ -103,7 +103,7 @@ foreach($varray as $vil) {
 <div class="clear"></div>
 <br />
 
-<h4 class="round">Leírás:</h4>
+<h4 class="round">Description</h4>
 
 <div class="description description1"><?php echo nl2br($profiel[1]); ?></div>
 <div class="description description2"><?php echo nl2br($profiel[0]); ?></div>
@@ -111,15 +111,15 @@ foreach($varray as $vil) {
 <div class="clear"></div>
 
 
-<h4 class="round">Falvak</h4>
+<h4 class="round">Villages</h4>
 
 <table cellpadding="1" cellspacing="1" id="villages">
 	<thead>
 		<tr>
-			<th class="name">Név</th>
-            <th>Oázisok</th>
-			<th>Lakosság</th>
-			<th>Koordináták</th>
+			<th class="name">Name</th>
+            <th>Oasis</th>
+			<th>Population</th>
+			<th>Location</th>
 		</tr>
 	</thead>
 	<tbody>

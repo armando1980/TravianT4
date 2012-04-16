@@ -1,29 +1,29 @@
-<div class="contentNavi tabNavi">
+﻿<div class="contentNavi tabNavi">
 				<div class="container normal">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="statistiken.php?tid=4"><span class="tabItem">Áttekintés</span></a></div>
+					<div class="content"><a href="statistiken.php?tid=4"><span class="tabItem">Overview</span></a></div>
 				</div>
 				<div class="container normal">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="statistiken.php?tid=41"><span class="tabItem">Támadó</span></a></div>
+					<div class="content"><a href="statistiken.php?tid=41"><span class="tabItem">Attacker</span></a></div>
 				</div>
 				<div class="container active">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="statistiken.php?tid=42"><span class="tabItem">Védő</span></a></div>
+					<div class="content"><a href="statistiken.php?tid=42"><span class="tabItem">Defender</span></a></div>
 				</div>
 				<div class="container normal">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="statistiken.php?tid=43"><span class="tabItem">Top10</span></a></div>
+					<div class="content"><a href="statistiken.php?tid=43"><span class="tabItem">Top 10</span></a></div>
 				</div><div class="clear"></div>
 </div>
-<h4 class="round">A legsikeresebb klánok (Def)</h4>
+<h4 class="round">Top Defending Alliances</h4>
 <table cellpadding="1" cellspacing="1" id="alliance" class="row_table_data">
 	<thead>
-		<tr><td></td><td>Klán</td><td>Játékosok</td><td>Ø</td><td>Pontok</td></tr>
+		<tr><td></td><td>Alliance</td><td>Players</td><td>Ø</td><td>Points</td></tr>
 		</thead><tbody>
 <?php
 $myrank = $ranking->getAllianceDefRank($session->alliance);
@@ -199,10 +199,10 @@ if(!isset($_GET['tid'])){ $_GET['tid']='1'; }
             <table class="transparent">
                 <tbody><tr>
                     <td>
-                        <span>Rang: <input type="text" class="text ra" maxlength="5" name="rank" value="" /></span>
+                        <span>Rank <input type="text" class="text ra" maxlength="5" name="rank" value="" /></span>
                     </td>
                     <td>
-                        <span>vagy név: <input type="text" class="text name" maxlength="20" name="name" value="<?php if(!is_numeric($search)) {echo $search; } ?>" /></span>
+                        <span>Name <input type="text" class="text name" maxlength="20" name="name" value="<?php if(!is_numeric($search)) {echo $search; } ?>" /></span>
                     </td>
                     <td>
                         <input type="hidden" name="ft" value="r<?php echo isset($_GET['tid'])? $_GET['tid'] : 1; ?>" />

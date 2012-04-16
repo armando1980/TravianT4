@@ -1,10 +1,10 @@
-<h1 class="titleInHeader">Kincstár <span class="level">Szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
+﻿<h1 class="titleInHeader">Treasure Chamber <span class="level">Level <?php echo $village->resarray['f'.$id]; ?></span></h1>
 
     <div id="build" class="gid27">
     <div class="build_desc">
         <a href="#" onClick="return Travian.Game.iPopup(27,4);" class="build_logo">
         <img class="building big white g27" src="img/x.gif" alt="Kincstár" title="Kincstár"></a>
-        A birodalmad kincsei a kincstárban raktározódnak . Ha eléri a 10-es szintet akkor ereklyét tudsz benne tárolni.</div>
+        The riches of your empire are kept in the treasure chamber. In each treasure chamber level 10 or higher, there is room for one artifact. After you have captured an artifact it takes 24 hours to be effective, except on speed servers where it only takes 12 hours.</div>
         
         <?php
 include("upgrade.tpl");
@@ -16,9 +16,9 @@ include("upgrade.tpl");
     		<thead>
     			<tr>
     				<td></td>
-                                <td>Ereklye neve</td>
-                                <td>Falu</td>
-                                <td>Dátum</td>
+                                <td>Artefact Name</td>
+                                <td>Village</td>
+                                <td>Date</td>
     			</tr>
     		</thead>
     		<tbody>
@@ -34,7 +34,7 @@ include("upgrade.tpl");
         		echo '<tr>';
         		echo '<td class="icon"><img class="artefact_icon_' . $row['type'] . '" src="img/x.gif" alt="" title=""></td>';
         		echo '<td class="nam">';
-        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Kincstár <b>10</b>, Hatás <b>Village containing inscriptions</b></div>';
+        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Treasure Chamber <b>10</b></b></div>';
         		echo '</td>';
         		echo '<td class="pla"><a href="karte.php?d=' . $row['vref'] . '&c=' . $generator->getMapCheck($row['vref']) . '">' . $database->getUserField($row['owner'], "username", 0) . '</a></td>';
         		echo '<td class="al"><a href="allianz.php?aid=' . $database->getUserField($row['owner'], "alliance", 0) . '">' . $database->getAllianceName($database->getUserField($row['owner'], "alliance", 0)) . '</a></td>';
@@ -54,7 +54,7 @@ include("upgrade.tpl");
         		echo '<tr>';
         		echo '<td class="icon"><img class="artefact_icon_' . $row['type'] . '" src="img/x.gif" alt="" title=""></td>';
         		echo '<td class="nam">';
-        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Kincstár <b>10</b>, Hatás <b>Village containing inscriptions</b></div>';
+        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Treasure Chamber <b>10</b></div>';
         		echo '</td>';
         		echo '<td class="pla"><a href="karte.php?d=' . $row['vref'] . '&c=' . $generator->getMapCheck($row['vref']) . '">' . $database->getUserField($row['owner'], "username", 0) . '</a></td>';
         		echo '<td class="al"><a href="allianz.php?aid=' . $database->getUserField($row['owner'], "alliance", 0) . '">' . $database->getAllianceName($database->getUserField($row['owner'], "alliance", 0)) . '</a></td>';
@@ -74,7 +74,7 @@ include("upgrade.tpl");
         		echo '<tr>';
         		echo '<td class="icon"><img class="artefact_icon_' . $row['type'] . '" src="img/x.gif" alt="" title=""></td>';
         		echo '<td class="nam">';
-        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Kincstár <b>10</b>, Hatás <b>Village containing inscriptions</b></div>';
+        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Treasure Chamber <b>10</b></div>';
         		echo '</td>';
         		echo '<td class="pla"><a href="karte.php?d=' . $row['vref'] . '&c=' . $generator->getMapCheck($row['vref']) . '">' . $database->getUserField($row['owner'], "username", 0) . '</a></td>';
         		echo '<td class="al"><a href="allianz.php?aid=' . $database->getUserField($row['owner'], "alliance", 0) . '">' . $database->getAllianceName($database->getUserField($row['owner'], "alliance", 0)) . '</a></td>';
@@ -94,7 +94,7 @@ include("upgrade.tpl");
         		echo '<tr>';
         		echo '<td class="icon"><img class="artefact_icon_' . $row['type'] . '" src="img/x.gif" alt="" title=""></td>';
         		echo '<td class="nam">';
-        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Kincstár <b>10</b>, Hatás <b>Village containing inscriptions</b></div>';
+        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Treasure Chamber <b>10</b></div>';
         		echo '</td>';
         		echo '<td class="pla"><a href="karte.php?d=' . $row['vref'] . '&c=' . $generator->getMapCheck($row['vref']) . '">' . $database->getUserField($row['owner'], "username", 0) . '</a></td>';
         		echo '<td class="al"><a href="allianz.php?aid=' . $database->getUserField($row['owner'], "alliance", 0) . '">' . $database->getAllianceName($database->getUserField($row['owner'], "alliance", 0)) . '</a></td>';
@@ -113,7 +113,7 @@ include("upgrade.tpl");
         		echo '<tr>';
         		echo '<td class="icon"><img class="artefact_icon_' . $row['type'] . '" src="img/x.gif" alt="" title=""></td>';
         		echo '<td class="nam">';
-        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Kincstár <b>10</b>, Hatás <b>Village containing inscriptions</b></div>';
+        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Treasure Chamber <b>10</b></div>';
         		echo '</td>';
         		echo '<td class="pla"><a href="karte.php?d=' . $row['vref'] . '&c=' . $generator->getMapCheck($row['vref']) . '">' . $database->getUserField($row['owner'], "username", 0) . '</a></td>';
         		echo '<td class="al"><a href="allianz.php?aid=' . $database->getUserField($row['owner'], "alliance", 0) . '">' . $database->getAllianceName($database->getUserField($row['owner'], "alliance", 0)) . '</a></td>';
@@ -132,7 +132,7 @@ include("upgrade.tpl");
         		echo '<tr>';
         		echo '<td class="icon"><img class="artefact_icon_' . $row['type'] . '" src="img/x.gif" alt="" title=""></td>';
         		echo '<td class="nam">';
-        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Kincstár <b>10</b>, Hatás <b>Village containing inscriptions</b></div>';
+        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Treasure Chamber <b>10</b></div>';
         		echo '</td>';
         		echo '<td class="pla"><a href="karte.php?d=' . $row['vref'] . '&c=' . $generator->getMapCheck($row['vref']) . '">' . $database->getUserField($row['owner'], "username", 0) . '</a></td>';
         		echo '<td class="al"><a href="allianz.php?aid=' . $database->getUserField($row['owner'], "alliance", 0) . '">' . $database->getAllianceName($database->getUserField($row['owner'], "alliance", 0)) . '</a></td>';
@@ -151,7 +151,7 @@ include("upgrade.tpl");
         		echo '<tr>';
         		echo '<td class="icon"><img class="artefact_icon_' . $row['type'] . '" src="img/x.gif" alt="" title=""></td>';
         		echo '<td class="nam">';
-        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Kincstár <b>10</b>, Hatás <b>Village containing inscriptions</b></div>';
+        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Treasure Chamber <b>10</b></div>';
         		echo '</td>';
         		echo '<td class="pla"><a href="karte.php?d=' . $row['vref'] . '&c=' . $generator->getMapCheck($row['vref']) . '">' . $database->getUserField($row['owner'], "username", 0) . '</a></td>';
         		echo '<td class="al"><a href="allianz.php?aid=' . $database->getUserField($row['owner'], "alliance", 0) . '">' . $database->getAllianceName($database->getUserField($row['owner'], "alliance", 0)) . '</a></td>';
@@ -170,7 +170,7 @@ include("upgrade.tpl");
         		echo '<tr>';
         		echo '<td class="icon"><img class="artefact_icon_9" src="img/x.gif" alt="" title=""></td>';
         		echo '<td class="nam">';
-        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Kincstár <b>10</b>, Hatás <b>All villages</b></div>';
+        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Treasure Chamber <b>10</b></div>';
         		echo '</td>';
         		echo '<td class="pla"><a href="karte.php?d=' . $row['vref'] . '&c=' . $generator->getMapCheck($row['vref']) . '">' . $database->getUserField($row['owner'], "username", 0) . '</a></td>';
         		echo '<td class="al"><a href="allianz.php?aid=' . $database->getUserField($row['owner'], "alliance", 0) . '">' . $database->getAllianceName($database->getUserField($row['owner'], "alliance", 0)) . '</a></td>';
@@ -189,7 +189,7 @@ include("upgrade.tpl");
         		echo '<tr>';
         		echo '<td class="icon"><img class="artefact_icon_10" src="img/x.gif" alt="" title=""></td>';
         		echo '<td class="nam">';
-        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Kincstár <b>10</b>, Hatás <b>All villages</b></div>';
+        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Treasure Chamber <b>10</b></div>';
         		echo '</td>';
         		echo '<td class="pla"><a href="karte.php?d=' . $row['vref'] . '&c=' . $generator->getMapCheck($row['vref']) . '">' . $database->getUserField($row['owner'], "username", 0) . '</a></td>';
         		echo '<td class="al"><a href="allianz.php?aid=' . $database->getUserField($row['owner'], "alliance", 0) . '">' . $database->getAllianceName($database->getUserField($row['owner'], "alliance", 0)) . '</a></td>';
@@ -205,7 +205,7 @@ include("upgrade.tpl");
         		echo '<tr>';
         		echo '<td class="icon"><img class="artefact_icon_' . $row['type'] . '" src="img/x.gif" alt="" title=""></td>';
         		echo '<td class="nam">';
-        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Kincstár <b>10</b>, Hatás <b>Village containing inscriptions</b></div>';
+        		echo '<a href="build.php?id=' . $id . '&show='.$row['id'].'">' . $row['name'] . '</a> <span class="bon">(' . $row['effect'] . ')</span><div class="info">Treasure Chamber <b>10</b></div>';
         		echo '</td>';
         		echo '<td class="pla"><a href="karte.php?d=' . $row['vref'] . '&c=' . $generator->getMapCheck($row['vref']) . '">' . $database->getUserField($row['owner'], "username", 0) . '</a></td>';
         		echo '<td class="al"><a href="allianz.php?aid=' . $database->getUserField($row['owner'], "alliance", 0) . '">' . $database->getAllianceName($database->getUserField($row['owner'], "alliance", 0)) . '</a></td>';

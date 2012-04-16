@@ -100,34 +100,33 @@ if($message->unread) {
 </div> 
 </div>
 					<div id="mid">
-<?php include("Templates/menu.tpl"); ?>
 
 												<div class="clear"></div> 
 						<div id="contentOuterContainer"> 
 							<div class="contentTitle">&nbsp;</div> 
 
 <div class="contentContainer">
-								<div id="content" class="hero_inventory"><h1 class="titleInHeader">Hős</h1>
+								<div id="content" class="hero_inventory"><h1 class="titleInHeader">Hero</h1>
 <div class="contentNavi subNavi">
 				<div class="container active">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="hero_inventory.php"><span class="tabItem">Tulajdonságok</span></a></div>
+					<div class="content"><a href="hero_inventory.php"><span class="tabItem">Attributes</span></a></div>
 				</div>
 				<div class="container normal">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="hero.php"><span class="tabItem">Hős készítő</span></a></div>
+					<div class="content"><a href="hero.php"><span class="tabItem">Appearance</span></a></div>
 				</div>
 				<div class="container normal">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="hero_adventure.php"><span class="tabItem">Kaland</span></a></div>
+					<div class="content"><a href="hero_adventure.php"><span class="tabItem">Adventures</span></a></div>
 				</div>
 				<div class="container normal">
 					<div class="background-start">&nbsp;</div>
 					<div class="background-end">&nbsp;</div>
-					<div class="content"><a href="hero_auction.php"><span class="tabItem">Árverések</span></a></div>
+					<div class="content"><a href="hero_auction.php"><span class="tabItem">Auctions</span></a></div>
 				</div><div class="clear"></div>
 		</div>
 		<script type="text/javascript">
@@ -211,7 +210,7 @@ if($gi['bag']!=0){
 		</div>
 	</div>
 	<div class="heroHidden">
-		<input type="checkbox" class="check" name="hideShow" id="heroHideShow" checked="checked" disabled> A hősöd a falu védelménél (amelyből a hőst irányítod éppen) elrejtőzik, ha ez az opció aktív.
+		<input type="checkbox" class="check" name="hideShow" id="heroHideShow" checked="checked" disabled> When checked hero will defend village
 	</div>
 </div>
 <div id="hero_inventory">
@@ -260,8 +259,8 @@ if($inv <= 12){
 }
 ?>
 			<div class="market">
-				<a class="buy arrow" href="hero_auction.php?action=buy">vásárlás</a>
-				<a class="sell arrow" href="hero_auction.php?action=sell">eladás</a>
+				<a class="buy arrow" href="hero_auction.php?action=buy">Buy Items</a>
+				<a class="sell arrow" href="hero_auction.php?action=sell">Sell Items</a>
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>

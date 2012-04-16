@@ -1,7 +1,7 @@
-<h4 class="round">A leghatalmasabb hősök</h4>
+﻿<h4 class="round">The Top Heros</h4>
 		<table cellpadding="1" cellspacing="1" id="heroes" class="row_table_data">
 			<thead>
-		<tr><td></td><td>Játékosok</td><td>Szint</td><td>Tapasztalat</td></tr>
+		<tr><td></td><td>Name</td><td>Level</td><td>Experience</td></tr>
 		</thead><tbody>
 <?php
 $myrank = $ranking->getHeroRank($session->uid);
@@ -178,15 +178,15 @@ if(!isset($_GET['tid'])){ $_GET['tid']='1'; }
             <table class="transparent">
                 <tbody><tr>
                     <td>
-                        <span>Rang: <input type="text" class="text ra" maxlength="5" name="rank" value="" /></span>
+                        <span>rank <input type="text" class="text ra" maxlength="5" name="rank" value="" /></span>
                     </td>
                     <td>
-                        <span>vagy név: <input type="text" class="text name" maxlength="20" name="name" value="<?php if(!is_numeric($search)) {echo $search; } ?>" /></span>
+                        <span>name <input type="text" class="text name" maxlength="20" name="name" value="<?php if(!is_numeric($search)) {echo $search; } ?>" /></span>
                     </td>
                     <td>
                         <input type="hidden" name="ft" value="r<?php echo isset($_GET['tid'])? $_GET['tid'] : 1; ?>" />
                         <button type="submit" value="submit" name="submit" id="btn_ok" class="dynamic_img" src="img/x.gif">
-            <div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">OK</div></div></button>
+            <div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Search</div></div></button>
                     </td>
                 </tr>
                 </tbody>

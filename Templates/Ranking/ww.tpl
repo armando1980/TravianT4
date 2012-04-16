@@ -1,4 +1,4 @@
-<?php
+﻿<?php
  
     $result = mysql_query("select ".TB_PREFIX."users.id, ".TB_PREFIX."users.username,".TB_PREFIX."users.alliance, ".TB_PREFIX."fdata.wwname, ".TB_PREFIX."fdata.f99, ".TB_PREFIX."vdata.name, ".TB_PREFIX."vdata.wref
                         FROM ".TB_PREFIX."users 
@@ -18,17 +18,11 @@
       ?>
 			<tr class="hover">
 				<td class="ra"><?php echo $cont; $cont++;?>.</td>
-				<td class="pla">
-                <?php
-                echo "<a href=\"karte.php?d=".$row['wref']."&amp;c=".$generator->getMapCheck($row['wref'])."\">";
-                ?>
-                <?php
-                if($row['username']==Natars){
-                echo "Natar";
-                }
-                ?>
-                </a>
-                </td>
+				<td class="pla"><a href="spieler.php?uid=<?php echo $row['id'];?>"><?php echo $row['username'];?></a></td>
+
+                
+                
+
 				<td class="nam"><?php echo $row['wwname'];?></td>
 				<td class="al">
                 

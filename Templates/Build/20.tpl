@@ -1,9 +1,9 @@
-<h1 class="titleInHeader">Istálló <span class="level">szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
+﻿<h1 class="titleInHeader">stable <span class="level"> Level <?php echo $village->resarray['f'.$id]; ?></span></h1>
 <div id="build" class="gid20">
 <p class="build_desc">
 <a href="#" onClick="return Travian.Game.iPopup(20,4);" class="build_logo">
 <img class="building big white g20" src="img/x.gif" alt="Istálló" title="Istálló" /> </a>
-Az istállóban a lovasságot képzik. Minél nagyobb szintű, annál gyorsabb a folyamat. Valamint, magasabb szinteken új egységeket is képezhetsz, miután kifejlesztetted őket az Akadémián.<br /></p>
+In the stable cavalry is trained. The higher its level the faster the troops are trained.<br /></p>
 <?php 
 include("upgrade.tpl");
 ?>
@@ -19,24 +19,24 @@ include("upgrade.tpl");
                 </div>
 			<div class="clear"></div>
 				    <button type="submit" value="ok" name="s1" id="btn_train" value="ok" class="startTraining">
-                    <div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Kiképzés</div></div>
+                    <div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Train</div></div>
                     </button>
 
 		</form>
 <?php
 	} else {
-		echo "<b>A kiképzéseket az épület felépülése után lehet elkezdeni.</b><br>\n";
+		echo "<b>No Units have been Researched</b><br>\n";
 	}
     $trainlist = $technology->getTrainingList(2);
     if(count($trainlist) > 0) {
     //$timer = 2*count($trainlist);
     	echo "
-        <h4 class=\"round spacer\">Kiképzés</h4>
+        <h4 class=\"round spacer\">Training</h4>
     <table cellpadding=\"1\" cellspacing=\"1\" class=\"under_progress\">
 		<thead><tr>
-			<td>Kiképzés alatt</td>
-			<td>Idő</td>
-			<td>Kész</td>
+			<td>Unit</td>
+			<td>Duration</td>
+			<td>Finished</td>
 		</tr></thead>
 		<tbody>";
 		$TrainCount = 0;
@@ -55,7 +55,7 @@ include("upgrade.tpl");
 			$time = $generator->procMTime($train['commence']+($train['eachtime']*$train['amt']));
 			echo " ".$time[1]." óra";
 		} ?>
-		</tr><tr class="next"><td colspan="3">A következő egység <span id="timer2"><?php echo $NextFinished; ?></span> múlva lesz kész</td></tr>
+		</tr><tr class="next"><td colspan="3">The next unit is ready <span id="timer2"><?php echo $NextFinished; ?></span> </td></tr>
         </tbody></table>
     <?php }
     ?> </p></div>

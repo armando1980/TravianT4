@@ -32,6 +32,62 @@ define("SYSTEM_MESSAGE","System message");
 define("TRAVIAN_PLUS","Travian <b><span class=\"plus_g\">P</span><span class=\"plus_o\">l</span><span class=\"plus_g\">u</span><span class=\"plus_o\">s</span></span></span></b>");
 define("CONTACT","Contact us!");
 
+define("HEADER_MESSAGES","Messages");
+define("HEADER_PLUS","Plus");
+define("HEADER_ADMIN","Admin");
+define("HEADER_PLUSMENU","Plus menu");
+define("HEADER_NOTICES","Reports");
+define("HEADER_STATS","Statistics");
+define("HEADER_MAP","Map");
+define("HEADER_DORF2","Village Center");
+define("HEADER_DORF1","Resource");
+define("HEADER_GOLD","Gold");
+define("HEADER_SILVER","Silver");
+define("HEADER_NIGHT","Night");
+define("HEADER_DAY","Day");
+define("HEADER_NOTICES_NEW","New Report");
+
+
+define("SIDEINFO_ADVENTURES","Adventure");
+define("SIDEINFO_AUCTIONS","Auction");
+define("SIDEINFO_PROFILE","Profile");
+define("SIDEINFO_ALLIANCE","Alliance");
+define("SIDEINFO_CHANGE_TITLE","These double-click to rename the village");
+define("SIDEINFO_CHANGEVIL_TITLE","Village name change");
+define("SIDEINFO_CHANGEVIL_LABEL","New village name");
+define("SIDEINFO_CHANGEVIL_BTN","Cancel");
+
+define("LOGOUT_TITLE","Logout complete!");
+define("LOGOUT_H4","Thank you for visiting");
+define("LOGOUT_DESC","If multiple people use this PC, you should clear the cookie with your user name and password for security reasons");
+define("LOGOUT_LINK","Clear cookies");
+
+define("LOGIN_WELCOME","Welcome to server");
+define("LOGIN_USERNAME","Username");
+define("LOGIN_PASSWORD","Password");
+define("LOGIN_LOWRES_DESC","Low resolution");
+define("LOGIN_LOWRES_OPTION","");
+define("LOGIN_LOWRES_NOTICE","");
+define("LOGIN_PW_FORGOTTEN","Password Forgotten");
+
+define("LOGIN_PW_REQUEST","Request Password");
+define("LOGIN_PW_EMAIL","Email");
+define("LOGIN_PW_BTN","Go");
+
+define("REGISTER_USERINFO","Register");
+define("REGISTER_USERNAME","Name");
+define("REGISTER_EMAIL","Email");
+define("REGISTER_PASSWORD","Password");
+define("REGISTER_STARTER","");
+define("REGISTER_SELECT_TRIBE","Select Tribe");
+define("REGISTER_LOCATION","Location");
+define("REGISTER_NE","North-East");
+define("REGISTER_NW","North-West");
+define("REGISTER_SE","South-East");
+define("REGISTER_SW","South-West");
+define("REGISTER_RANDOM","Random");
+define("REGISTER_MOREINFO","T&C");
+
 //MENU
 define("REG","Register");
 define("FORUM","Forum");
@@ -154,6 +210,9 @@ define("Q5_RESP","As you noticed, building orders take rather long. The world of
 //======================================================//
 //================ UNITS - DO NOT EDIT! ================//
 //======================================================//
+// HEROE UNIT
+define("U0","Hero");
+
 //ROMAN UNITS
 define("U1","Legionnaire");
 define("U2","Praetorian");

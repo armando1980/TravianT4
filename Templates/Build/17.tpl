@@ -1,10 +1,10 @@
-<h1 class="titleInHeader">Piac <span class="level">szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
+﻿<h1 class="titleInHeader">Market <span class="level"> Level <?php echo $village->resarray['f'.$id]; ?></span></h1>
 <div id="build" class="gid17">
 <div class="build_desc">
 <a href="#" onClick="return Travian.Game.iPopup(17,4);" class="build_logo"> 
 	<img class="building big white g17" src="img/x.gif" alt="Piac" title="Piac" /> 
 </a> 
-A piacon keresztül tudsz más játékosokkal kereskedni. Az épület szintje dönti el, egyszerre mennyi kereskedő áll rendelkezésedre.</div> 
+At the marketplace you can trade resources with other players. The higher its level, the more resources can be transported at the same time.</div> 
  
 <?php
 include("upgrade.tpl");
@@ -15,7 +15,7 @@ include("17_menu.tpl");
 var haendler = <?php echo $market->merchantAvail(); ?>;
 var carry = <?php echo $market->maxcarry; ?>;
 </script>
-<div class="boxes boxesColor gray traderCount"><div class="boxes-tl"></div><div class="boxes-tr"></div><div class="boxes-tc"></div><div class="boxes-ml"></div><div class="boxes-mr"></div><div class="boxes-mc"></div><div class="boxes-bl"></div><div class="boxes-br"></div><div class="boxes-bc"></div><div class="boxes-contents">Kereskedő <?php echo $market->merchant; ?> / <?php echo $market->merchantAvail(); ?></div>
+<div class="boxes boxesColor gray traderCount"><div class="boxes-tl"></div><div class="boxes-tr"></div><div class="boxes-tc"></div><div class="boxes-ml"></div><div class="boxes-mr"></div><div class="boxes-mc"></div><div class="boxes-bl"></div><div class="boxes-br"></div><div class="boxes-bc"></div><div class="boxes-contents">Merchants <?php echo $market->merchant; ?> / <?php echo $market->merchantAvail(); ?></div>
 				</div><div class="clear"></div>
 <?php
 $allres = "".$_POST['r1']."+".$_POST['r2']."+".$_POST['r3']."+".$_POST['r4']."";
@@ -33,33 +33,33 @@ if(isset($_POST['ft'])=='check' && $allres!=0 && $_POST['x']!=0 && $_POST['y']!=
 <table id="send_select" class="send_res" cellpadding="1" cellspacing="1">
 	<tr>
 		<td class="ico"><img class="r1" src="img/x.gif" alt="Fa" title="Fa" /></td> 
-		<td class="nam"> Fa</td> 
+		<td class="nam"> Wood</td> 
 		<td class="val"><input class="text disabled" type="text" name="r1" id="r1" value="<?php echo $_POST['r1']; ?>" readonly="readonly"></td> 
 		<td class="max"> / <span class="none"><B><?php echo $market->maxcarry; ?></B></span> </td> 
 	</tr>
     <tr> 
 		<td class="ico"><img class="r2" src="img/x.gif" alt="Agyag" title="Agyag" /></td> 
-		<td class="nam"> Agyag</td> 
+		<td class="nam"> Clay</td> 
 		<td class="val"><input class="text disabled" type="text" name="r2" id="r2" value="<?php echo $_POST['r2']; ?>" readonly="readonly"></td> 
 		<td class="max"> / <span class="none"><b><?php echo$market->maxcarry; ?></b></span> </td> 
 	</tr>
     <tr> 
 		<td class="ico"><img class="r3" src="img/x.gif" alt="Vasérc" title="Vasérc" /></td> 
-		<td class="nam"> Vasérc</td> 
+		<td class="nam"> Iron</td> 
 		<td class="val"><input class="text disabled" type="text" name="r3" id="r3" value="<?php echo $_POST['r3']; ?>" readonly="readonly"> 
 		</td> 
 		<td class="max"> / <span class="none"><b><?php echo $market->maxcarry; ?></b></span> </td> 
 	</tr>
     <tr> 
 		<td class="ico"><img class="r4" src="img/x.gif" alt="Búza" title="Búza" /></td> 
-		<td class="nam"> Búza</td> 
+		<td class="nam"> Wheat</td> 
 		<td class="val"> <input class="text disabled" type="text" name="r4" id="r4" value="<?php echo $_POST['r4']; ?>" readonly="readonly"> 
 		</td> 
 		<td class="max"> / <span class="none"><B><?php echo $market->maxcarry; ?></B></span></td> 
 	</tr></table> 
 <table id="target_validate" class="res_target" cellpadding="1" cellspacing="1">
 	<tbody><tr>
-		<th>Cél:</th>
+		<th>Coordinates:</th>
         <?php
 
         $getwref = $database->getVilWref($_POST['y'],$_POST['x']);
@@ -69,15 +69,15 @@ if(isset($_POST['ft'])=='check' && $allres!=0 && $_POST['x']!=0 && $_POST['y']!=
 		<td class="vil"><a href="karte.php?x=<?php echo $_POST['y']; ?>&amp;y=<?php echo $_POST['x']; ?>"><span class="coordinates coordinatesWithText"><span class="coordText"><?php echo $getvildata['name']; ?></span><span class="coordinatesWrapper"><span class="coordinateY">(<?php echo $_POST['y']; ?></span><span class="coordinatePipe">|</span><span class="coordinateX"><?php echo $_POST['x']; ?>)</span></span></span><span class="clear"></span></a></td>
 	</tr>
 	<tr>
-		<th>Játékos:</th>
+		<th>Player:</th>
 		<td><a href="spieler.php?uid=<?php echo $getvildata; ?>"><?php echo $database->getUserField($getvildata,username,0); ?></a></td>
 	</tr>
 	<tr>
-		<th>Időtartam:</th>
+		<th>duration:</th>
 		<td>-</td>
 	</tr>
 	<tr>
-		<th>Kereskedő:</th>
+		<th>Merchants:</th>
 		<td><?php
         $resource = array($_POST['r1'],$_POST['r2'],$_POST['r3'],$_POST['r4']); 
         echo ceil((array_sum($resource)-0.1)/$market->maxcarry); ?></td>
@@ -91,7 +91,7 @@ if(isset($_POST['ft'])=='check' && $allres!=0 && $_POST['x']!=0 && $_POST['y']!=
 </tbody></table>
 <div class="clear"></div>
 <p>
-<button type="submit" value="ok" name="s1" id="btn_ok" class="dynamic_img" tabindex="8"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Megerősítés</div></div></button>
+<button type="submit" value="ok" name="s1" id="btn_ok" class="dynamic_img" tabindex="8"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Send</div></div></button>
 </p></form>
 <?php }else{ ?>
 <form method="POST" name="snd" action="build.php"> 
@@ -102,10 +102,10 @@ if(isset($_POST['ft'])=='check' && $allres!=0 && $_POST['x']!=0 && $_POST['y']!=
 <tr>
 
 		<td class="ico"> 
-			<a href="#" onClick="upd_res(1,1); return false;"><img class="r1" src="img/x.gif" alt="Fa" title="Fa" /></a> 
+			<a href="#" onClick="upd_res(1,1); return false;"><img class="r1" src="img/x.gif" alt="Fa" title="Wood" /></a> 
 		</td> 
 		<td class="nam"> 
-			Fa
+			Wood
 		</td> 
 		<td class="val"> 
 			<input class="text" type="text" name="r1" id="r1" value="<?php echo $_POST['r1']; ?>" maxlength="5" onKeyUp="upd_res(1)" tabindex="1"> 
@@ -118,7 +118,7 @@ if(isset($_POST['ft'])=='check' && $allres!=0 && $_POST['x']!=0 && $_POST['y']!=
 			<a href="#" onClick="upd_res(2,1); return false;"><img class="r2" src="img/x.gif" alt="Agyag" title="Agyag" /></a> 
 		</td> 
 		<td class="nam"> 
-			Agyag
+			Clay
 		</td> 
 		<td class="val"> 
 			<input class="text" type="text" name="r2" id="r2" value="<?php echo $_POST['r2']; ?>" maxlength="5" onKeyUp="upd_res(2)" tabindex="2"> 
@@ -131,7 +131,7 @@ if(isset($_POST['ft'])=='check' && $allres!=0 && $_POST['x']!=0 && $_POST['y']!=
 			<a href="#" onClick="upd_res(3,1); return false;"><img class="r3" src="img/x.gif" alt="Vasérc" title="Vasérc" /></a> 
 		</td> 
 		<td class="nam"> 
-			Vasérc
+			Iron
 		</td> 
 		<td class="val"> 
 			<input class="text" type="text" name="r3" id="r3" value="<?php echo $_POST['r3']; ?>" maxlength="5" onKeyUp="upd_res(3)" tabindex="3"> 
@@ -144,7 +144,7 @@ if(isset($_POST['ft'])=='check' && $allres!=0 && $_POST['x']!=0 && $_POST['y']!=
 			<a href="#" onClick="upd_res(4,1); return false;"><img class="r4" src="img/x.gif" alt="Búza" title="Búza" /></a> 
 		</td> 
 		<td class="nam"> 
-			Búza
+			Wheat
 		</td> 
 		<td class="val"> 
 			<input class="text" type="text" name="r4" id="r4" value="<?php echo $_POST['r4']; ?>" maxlength="5" onKeyUp="upd_res(4)" tabindex="4"> 
@@ -159,7 +159,7 @@ if(isset($_POST['ft'])=='check' && $allres!=0 && $_POST['x']!=0 && $_POST['y']!=
 				<tbody>
 					<tr>
 						<td>
-							<span>Falu:</span>
+							<span>Village Name:</span>
 						</td>
 						<td class="compactInput">
                         	<input class="text village" type="text" name="dname" value="<?php echo $_POST['dname']; ?>" maxlength="20" tabindex="5">
@@ -172,7 +172,7 @@ if(isset($_POST['ft'])=='check' && $allres!=0 && $_POST['x']!=0 && $_POST['y']!=
 				<tbody>
 					<tr>
 						<td>
-							<span class="or">vagy</span>
+							<span class="or">Coordinates</span>
 <?php
 if(isset($_GET['z'])){
 $coor = $database->getCoor($_GET['z']);
@@ -200,10 +200,10 @@ $coor['y'] = "";
 								</div>
 				</div>	</div>
 <div class="clear"></div>
-<p>Egy kereskedő maximum <b><?php echo $market->maxcarry; ?></b> nyersanyagot tud szállítani.</p>
+<p>Too few merchants.You can only carry<b><?php echo $market->maxcarry; ?></b> resources</p>
 <p>
 
-<button type="submit" value="ok" name="s1" id="btn_ok" class="dynamic_img" tabindex="8"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Küldés</div></div></button>
+<button type="submit" value="ok" name="s1" id="btn_ok" class="dynamic_img" tabindex="8"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Send</div></div></button>
 </p>
 </form>
 <?php
@@ -211,7 +211,7 @@ $error = '';
 if(isset($_POST['ft'])=='check'){
 
 	if(!$checkexist){
-		$error = '<span class="error"><b>In this village there are no coordinates.</b></span>';
+		$error = '<span class="error"><b>No Coordinates selected</b></span>';
     }elseif($_POST['r1']==0){
 		$error = '<span class="error"><b>Resources not selected.</b></span>';
     }elseif(!$_POST['x'] && !$_POST['y']){
@@ -285,7 +285,7 @@ document.snd.r1.focus();
 <?php
 $timer = 1;
 if(count($market->recieving) > 0) { 
-echo "<h4>Kereskedők jönnek</h4>";
+echo "<h4>yok</h4>";
     foreach($market->recieving as $recieve) {
        echo "<table class=\"traders\" cellpadding=\"1\" cellspacing=\"1\">";
     $ownerid = $database->getVillageField($recieve['from'],"owner");

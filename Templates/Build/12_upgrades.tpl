@@ -1,4 +1,4 @@
-<div class="clear"></div>
+﻿<div class="clear"></div>
 <div class="build_details researches">
 			<?php
 		$abdata = $database->getABTech($village->wid);
@@ -45,25 +45,25 @@ echo "<div class=\"clear\"></div>
 </div>";
 }
 		        if (${'ab'.$i}[$abdata['b'.$j]+1]['wood'] > $village->maxstore || ${'ab'.$i}[$abdata['b'.$j]+1]['clay'] > $village->maxstore || ${'ab'.$i}[$abdata['b'.$j]+1]['iron'] > $village->maxstore) {
-					echo "<div class=\"contractLink\"><span class=\"none\">Fejleszd a raktáradat</span></div>";
+					echo "<div class=\"contractLink\"><span class=\"none\">Upgrade Warehouse</span></div>";
 				}
 				else if (${'ab'.$i}[$abdata['b'.$j]+1]['crop'] > $village->maxcrop) {
-					echo "<div class=\"contractLink\"><span class=\"none\">Fejleszd a magtáradat</span></div>";
+					echo "<div class=\"contractLink\"><span class=\"none\">Upgrade Granary</span></div>";
 				}
 				else if (${'ab'.$i}[$abdata['b'.$j]+1]['wood'] > $village->awood || ${'ab'.$i}[$abdata['b'.$j]+1]['clay'] > $village->aclay || ${'ab'.$i}[$abdata['b'.$j]+1]['iron'] > $village->airon || ${'ab'.$i}[$abdata['b'.$j]+1]['crop'] > $village->acrop) {
 					if($village->getProd("crop")>0){
 						$time = $technology->calculateAvaliable(12,${'ab'.$i}[$abdata['b'.$j]+1]);
 			            echo "<div class=\"contractLink\"><span class=\"none\">Elegendő nyersanyag: ".$time[0]." ".$time[1]."</span></div>";
 					} else {
-						echo "<div class=\"contractLink\"><span class=\"none\">A búza termelésed negatív, soha nem lesz elég nyersanyagod</span></div>";
+						echo "<div class=\"contractLink\"><span class=\"none\">Wheat production is negative, there will never be enough resources</span></div>";
 					}
-		            echo "<div class=\"contractLink\"><span class=\"none\">Kevés nyersanyag</span></div>";
+		            echo "<div class=\"contractLink\"><span class=\"none\">few resources</span></div>";
 				}
 				else if ($building->getTypeLevel(12) <= $abdata['b'.$j]) {
-					echo "<div class=\"contractLink\"><span class=\"none\">Fejleszd a kovácsot</span></div>";
+					echo "<div class=\"contractLink\"><span class=\"none\">Improve the blacksmith</span></div>";
 				}
 				else if (count($ABups) > 0) {
-					echo "<div class=\"contractLink\"><span class=\"none\">Fejlesztés folyamatban...</span></div>";
+					echo "<div class=\"contractLink\"><span class=\"none\">Upgrading in progress</span></div>";
 				}
 				else {
 
@@ -71,7 +71,7 @@ echo "<div class=\"clear\"></div>
                     <button type=\"button\" value=\"Upgrade level\" class=\"build\" onclick=\"window.location.href = 'build.php?id=$id&amp;a=$j&amp;c=$session->mchecker'; return false;\">
 <div class=\"button-container\"><div class=\"button-position\"><div class=\"btl\"><div class=\"btr\"><div class=\"btc\"></div></div></div>
 <div class=\"bml\"><div class=\"bmr\"><div class=\"bmc\"></div></div></div><div class=\"bbl\"><div class=\"bbr\"><div class=\"bbc\"></div></div></div>
-</div><div class=\"button-contents\">Fejlesztés</div></div></button>
+</div><div class=\"button-contents\">development</div></div></button>
                     </span></div>";
 				}
 echo "</div>
@@ -85,7 +85,7 @@ echo "</div>
 
 <?php
 	if(count($ABups) > 0) {
-		echo "<table cellpadding=\"1\" cellspacing=\"1\" class=\"under_progress\"><thead><tr><td>Folyamatban lévő</td><td>Hátralévő idő</td><td>Kész</td></tr>
+		echo "<table cellpadding=\"1\" cellspacing=\"1\" class=\"under_progress\"><thead><tr><td>Unit</td><td>Remaining time</td><td>Finished</td></tr>
 </thead><tbody>";
 		$timer = 1;
 		foreach($ABups as $black) {

@@ -1,4 +1,4 @@
-<h1 class="titleInHeader">Akadémia <span class="level">szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
+﻿<h1 class="titleInHeader">Academy <span class="level"> Level <?php echo $village->resarray['f'.$id]; ?></span></h1>
 
 <div id="build" class="gid22">
 <div class="build_desc">
@@ -6,7 +6,7 @@
 
 	<img class="building big white g22" src="img/x.gif" alt="Akadémia" title="Akadémia" />
 </a>
-Az akadémián tudsz új egységeket kifejleszteni. <br><br>Minél jobban ki van építve annál jobb egységeket tudsz kiképezni.</div>
+New troop types must first be researched at the academy before they can be trained. The higher the level, the greater the number of troop types available to be researched..</div>
 <?php
 include("upgrade.tpl");
 ?>
@@ -16,7 +16,7 @@ include("upgrade.tpl");
 	if ($building->getTypeLevel(22) > 0) {
 		include("22_".$session->tribe.".tpl");
 	} else {
-		echo "<p><b>Nincs fejleszthető egység</b><br></p>\n";
+		echo "<p><b>No new troop types are currently available to be researched/b><br></p>\n";
 	}
 ?>
 

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 
 
@@ -44,13 +44,13 @@ $process['c'] = 1;
 $id = $database->addA2b($ckey,time(),$process['0'],$t1,$t2,$t3,$t4,$t5,$t6,$t7,$t8,$t9,$t10,$t11,$process['c']);
 
 if ($process['c']==1){
-$actionType = "Kémkedés";
+$actionType = "Scouting ~ ";
 }else if ($process['c']==2){
-$actionType = "Támogatás";
+$actionType = "Reinforcement ~ ";
 }elseif ($process['c']==3){
-$actionType = "Normál támadás";
+$actionType = "Normal Attack ~ ";
 }else{
-$actionType = "Rablótámadás";
+$actionType = "Raid ~ ";
 }
 
 
@@ -71,7 +71,7 @@ $end = ($tribe*10);
 
                     <tr>
 
-                        <th>Cél:</th>
+                        <th>Location</th>
 
                         <td><a href="karte.php?d=&amp;c="><?php echo $process[1]; ?> (<?php echo $coor['y']; ?>|<?php echo $coor['x']; ?>)</a></td>
 
@@ -79,7 +79,7 @@ $end = ($tribe*10);
 
                     <tr>
 
-                        <th>Játékos:</th>
+                        <th>Player</th>
 
                         <td>
                         <?php if($process['2'] == 3){ ?>
@@ -134,7 +134,7 @@ $end = ($tribe*10);
 
                     <tr>
 
-                        <th>Egységek</th>
+                        <th>Units</th>
 
                         <td <?php if (!isset($process['t1']) || $process['t1'] == ''){ echo "class=\"none\">0"; }else{ echo ">".$process['t1'];} ?></td>
 
@@ -165,7 +165,7 @@ $end = ($tribe*10);
                 <tbody class="options">
                 
                 <tr>
-            <th>Beállítások</th>
+            <th>options</th>
             <td colspan="11"><input class="radio" name="spy" value="1" checked="checked" type="radio">Nyersanyagok és egységek kikémlelése<br>
             <input class="radio" name="spy" value="2" type="radio">Védelmi berendezések és egységek kikémlelése                                            </td>
         </tr>
@@ -177,56 +177,56 @@ $end = ($tribe*10);
 
             <?php if($process['c']=='3'){ ?><tbody class="cata">
                 <tr>
-                    <th>Cél:</th>
+                    <th>Catapults</th>
                     <td colspan="10">
                     
                         <select name="ctar1" class="dropdown">
                             <option value="0">Random</option>
                             <?php if($building->getTypeLevel(16) >= 5) { ?>
-                			<optgroup label="Nyersanyagok">
-                                <option value="1">Favágó</option>
-                                <option value="2">Agyagbánya</option>
-                                <option value="3">Vasércbánya</option>
-                                <option value="4">Búzafarm</option>
-                                <option value="5">Fűrészüzem</option>
-                                <option value="6">Agyagégető</option>
-                                <option value="7">Vasöntöde</option>
-                                <option value="8">Malom</option>
-                                <option value="9">Pékség</option>
+                			<optgroup label="Resource">
+                                <option value="1">Lumber</option>
+                                <option value="2">Clay Pit</option>
+                                <option value="3">Iron Mine</option>
+                                <option value="4">Cropland</option>
+                                <option value="5">Sawmill</option>
+                                <option value="6">Brickworks</option>
+                                <option value="7">Iron foundry</option>
+                                <option value="8">Flour Mill</option>
+                                <option value="9">Bakery</option>
                             </optgroup>
                             <?php } ?>
                             
                             <?php if($building->getTypeLevel(16) >= 3) { ?>
-                            <optgroup label="Infrastruktúra">
-                                <option value="10">Raktár</option>
-                                <option value="11">Magtár</option>
+                            <optgroup label="Infranstructer">
+                                <option value="10">warehouse</option>
+                                <option value="11">granary</option>
                                 <?php if($building->getTypeLevel(16) >= 10) { ?>
-                                <option value="15">Főépület</option>
-                                <option value="17">Piac</option>
-                                <option value="18">Követség</option>
-                                <option value="24">Városháza</option>
-                                <option value="25">Rezidencia</option>
-                                <option value="26">Palota</option>
-                                <option value="27">Kincstár</option>
-                                <option value="28">Kereskedelmi központ</option>
+                                <option value="15">main Building</option>
+                                <option value="17">market</option>
+                                <option value="18">embassy</option>
+                                <option value="24">town hall</option>
+                                <option value="25">Residence</option>
+                                <option value="26">Palace</option>
+                                <option value="27">treasury</option>
+                                <option value="28">Trade center</option>
                                 <?php } ?>
-                                <option value="38">Nagy raktár</option>
-                                <option value="39">Nagy magtár</option>
+                                <option value="38">Great Warehouse</option>
+                                <option value="39">Great Granary</option>
                             </optgroup>
                             <?php } ?>
                             <?php if($building->getTypeLevel(16) >= 10) { ?>
                             <optgroup label="Katonai">
-                                <option value="12">Kovácsműhely</option>
-                                <option value="13">Páncélkovács?</option>
-                                <option value="14">Gyakorlóterület</option>
-                                <option value="16">Gyülekezőtér</option>
- 								<option value="19">Kaszárnya</option>
- 								<option value="20">Istálló</option>
- 								<option value="21">Műhely</option>
+                                <option value="12">smithy</option>
+                                <option value="13">Armoury</option>
+                                <option value="14">Tournament Square</option>
+                                <option value="16">Rally Point</option>
+ 								<option value="19">barrack</option>
+ 								<option value="20">stable</option>
+ 								<option value="21">workshop</option>
                                 <option value="22">Akadémia</option>
- 								<option value="29">Nagy kaszárnya</option>
-  								<option value="30">Nagy istálló</option>
-  								<option value="37">Hősök háza</option>
+ 								<option value="29">Great Barracks</option>
+  								<option value="30">Great Stable</option>
+  								<option value="37">Heros Mansion</option>
                             </optgroup>
                             <?php } ?>
                         </select>
@@ -237,49 +237,49 @@ $end = ($tribe*10);
                 <option value="0">Random</option>
                             <?php if($building->getTypeLevel(16) >= 5) { ?>
                             <optgroup label="Nyersanyagok">
-                                <option value="1">Favágó</option>
-                                <option value="2">Agyagbánya</option>
-                                <option value="3">Vasércbánya</option>
-                                <option value="4">Búzafarm</option>
-                                <option value="5">Fűrészüzem</option>
-                                <option value="6">Agyagégető</option>
-                                <option value="7">Vasöntöde</option>
-                                <option value="8">Malom</option>
-                                <option value="9">Pékség</option>
+                                <option value="1">lumber</option>
+                                <option value="2">clay Pit</option>
+                                <option value="3">Iron Mine</option>
+                                <option value="4">Cropland</option>
+                                <option value="5">Sawmill</option>
+                                <option value="6">Brickworks</option>
+                                <option value="7">iron foundry</option>
+                                <option value="8">Flour Mill</option>
+                                <option value="9">bakery</option>
                             </optgroup>
                             <?php } ?>
                             
                             <?php if($building->getTypeLevel(16) >= 3) { ?>
                             <optgroup label="Infrastruktúra">
-                                <option value="10">Raktár</option>
-                                <option value="11">Magtár</option>
+                                <option value="10">warehouse</option>
+                                <option value="11">granary</option>
                                 <?php if($building->getTypeLevel(16) >= 10) { ?>
-                                <option value="15">Főépület</option>
-                                <option value="17">Piac</option>
-                                <option value="18">Követség</option>
-                                <option value="24">Városháza</option>
-                                <option value="25">Rezidencia</option>
-                                <option value="26">Palota</option>
-                                <option value="27">Kincstár</option>
-                                <option value="28">Kereskedelmi központ</option>
+                                <option value="15">main Building</option>
+                                <option value="17">market</option>
+                                <option value="18">Embassy</option>
+                                <option value="24">town hall</option>
+                                <option value="25">residence</option>
+                                <option value="26">Palace</option>
+                                <option value="27">treasury</option>
+                                <option value="28">Trade center</option>
                                 <?php } ?>
-                                <option value="38">Nagy raktár</option>
-                                <option value="39">Nagy magtár</option>
+                                <option value="38">Great Warehouse</option>
+                                <option value="39">Great Granary</option>
                             </optgroup>
                             <?php } ?>
                             <?php if($building->getTypeLevel(16) >= 10) { ?>
                             <optgroup label="Katonai">
-                                <option value="12">Kovácsműhely</option>
-                                <option value="13">Páncélkovács?</option>
-                                <option value="14">Gyakorlóterület</option>
-                                <option value="16">Gyülekezőtér</option>
-                                <option value="19">Kaszárnya</option>
-                                <option value="20">Istálló</option>
-                                <option value="21">Műhely</option>
-                                <option value="22">Akadémia</option>
-                                <option value="29">Nagy kaszárnya</option>
-                                <option value="30">Nagy istálló</option>
-                                <option value="37">Hősök háza</option>
+                                <option value="12">smithy</option>
+                                <option value="13">Armoury</option>
+                                <option value="14">Tournament Square</option>
+                                <option value="16">Rally Point</option>
+                                <option value="19">barrack</option>
+                                <option value="20">stable</option>
+                                <option value="21">workshop</option>
+                                <option value="22">academy</option>
+                                <option value="29">Great Barracks</option>
+                                <option value="30">Great Stable</option>
+                                <option value="37">Heros Mansion</option>
                             </optgroup>
                             <?php } ?>
                         </select>
@@ -298,7 +298,7 @@ $end = ($tribe*10);
             <td colspan="10">
                 <?PHP
                 
-                echo"Megjegyzés: A katapult csak <b>normális támadásban</b> működik";
+                echo"Notice : Catapulats only hit things in <b>normális támadásban</b> ";
                 ?>
                 </td>
 
@@ -314,7 +314,7 @@ $end = ($tribe*10);
              <tbody class="infos">
     <tr>
 
-   <th>Érkezés:</th>
+   <th>Arrival</th>
 
             
 
@@ -352,9 +352,9 @@ $end = ($tribe*10);
 
             <td colspan="<?php if($process['t11'] != ''){ echo"11"; }else{ echo"10"; } ?>">
 
-            <div class="in">időtartam <?php echo $generator->getTimeFormat($time); ?> óra</div>
+            <div class="in">In <?php echo $generator->getTimeFormat($time); ?> hour</div>
 
-            <div class="at"><span id="tp2"> <?php echo date("H:i:s",time()+$time)?></span> óra</div>
+            <div class="at"><span id="tp2"> <?php echo date("H:i:s",time()+$time)?></span> Hour</div>
 
             </td>
 
@@ -379,14 +379,14 @@ $end = ($tribe*10);
 $attacker = $database->getUserField($session->uid,'alliance',0);
 $defender = $database->getUserField($process['2'],'alliance',0);
 		if($attacker!=0 && $attacker==$defender){
-			echo "<div class=\"alert\">Figyelmeztetés! Biztosan meg akarod támadni a szövettségesedet?</div>";
+			echo "<div class=\"alert\">Warning! Are you sure you want to attack this player</div>";
 		}
 
     if($database->hasBeginnerProtection($process['0'])==1) {  
-        echo"<div class=\"alert\"><b>Kezdővédelem alatt áll.</b></div>"; 
+        echo"<div class=\"alert\"><b>Cannot attack, in begginers protection.</b></div>"; 
     } else { 
 ?> 
-<button type="submit" value="ok" name="s1" id="btn_ok"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">Megerősítés</div></div></button>
+<button type="submit" value="ok" name="s1" id="btn_ok"><div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">confirm</div></div></button>
 
 <?php } ?>
 </form>

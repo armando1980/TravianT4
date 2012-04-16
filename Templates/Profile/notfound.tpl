@@ -1,2 +1,2 @@
-<h1>Játékos Profil</h1>
-<p>Játékos nem található</p>
+﻿<h1>Profile of</h1>
+<p>Cannot find</p>

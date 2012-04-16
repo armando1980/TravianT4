@@ -14,14 +14,14 @@ if($bindicate == 1) {
 	$uprequire = $building->resourceRequired($id,$village->resarray['f'.$id.'t'],($loopsame > 0 ? 2:1)+$doublebuild);
 ?>
 <div id="contract" class="contractWrapper">
-<div class="contractText">Kiépítés ára a következő (<?php echo $village->resarray['f'.$id]+($loopsame > 0 ? 2:1)+$doublebuild; ?>.) szintre:</div>
+<div class="contractText">It Costs to Upgrade to Level <?php echo $village->resarray['f'.$id]+($loopsame > 0 ? 2:1)+$doublebuild; ?> </div>
 <div class="contractCosts">
 <div class="showCosts">
-<span class="resources r1"><img class="r1" src="img/x.gif" title="Fa"><?php echo $uprequire['wood']; ?></span>
-<span class="resources r2"><img class="r2" src="img/x.gif" title="Agyag"><?php echo $uprequire['clay']; ?></span>
-<span class="resources r3"><img class="r3" src="img/x.gif" title="Vasérc"><?php echo $uprequire['iron']; ?></span>
-<span class="resources r4"><img class="r4" src="img/x.gif" title="Búza"><?php echo $uprequire['crop']; ?></span>
-<span class="resources r5"><img class="r5" src="img/x.gif" title="Élelemfelhasználás"><?php echo $uprequire['pop']; ?></span>
+<span class="resources r1"><img class="r1" src="img/x.gif" title="Wood"><?php echo $uprequire['wood']; ?></span>
+<span class="resources r2"><img class="r2" src="img/x.gif" title="Clay"><?php echo $uprequire['clay']; ?></span>
+<span class="resources r3"><img class="r3" src="img/x.gif" title="Iron"><?php echo $uprequire['iron']; ?></span>
+<span class="resources r4"><img class="r4" src="img/x.gif" title="Wheat"><?php echo $uprequire['crop']; ?></span>
+<span class="resources r5"><img class="r5" src="img/x.gif" title="Consumption"><?php echo $uprequire['pop']; ?></span>
 <div class="clear"></div>
 <span class="clocks">
 <img class="clock" src="img/x.gif" title="Idő">
@@ -47,20 +47,20 @@ echo "&nbsp;&nbsp;<button ".$disable." type=\"button\" value=\"npc\" class=\"ico
 </div></div>
 <?php
     if($bindicate == 2) {
-   		echo "<span class=\"none\">Jelenleg már építkezel.</span></div>";
+   		echo "<span class=\"none\">Currently, we have managed to build.</span></div>";
     }
     else if($bindicate == 3) {
-    	echo "<span class=\"none\">Jelenleg már építkezel.</span></div>";
+    	echo "<span class=\"none\">Currently, we have managed to build.</span></div>";
     }
     else if($bindicate == 4) {
-    	echo "<span class=\"none\">Élelemhiány: Előtte egy búzafarmot kell építened</span></div>";
+    	echo "<span class=\"none\">Food Shortage: Build a Wheat field</span></div>";
     }
    
     else if($bindicate == 5) {
-    	echo "<span class=\"none\">Építsd feljebb a raktáradat</span></div>";
+    	echo "<span class=\"none\">Upgrade Warehouse</span></div>";
     }
     else if($bindicate == 6) {
-    	echo "<span class=\"none\">Keep food storage upgrades</span></div>";
+    	echo "<span class=\"none\">Upgrade Granary</span></div>";
     }
     else if($bindicate == 7) {
     	$neededtime = $building->calculateAvaliable($id,$village->resarray['f'.$id.'t'],($loopsame > 0 ? 2:1));
@@ -77,26 +77,26 @@ echo "&nbsp;&nbsp;<button ".$disable." type=\"button\" value=\"npc\" class=\"ico
         echo "<button type=\"button\" value=\"Upgrade level\" class=\"build\" onclick=\"window.location.href = 'dorf2.php?a=$id&c=$session->checker'; return false;\">
 <div class=\"button-container\"><div class=\"button-position\"><div class=\"btl\"><div class=\"btr\"><div class=\"btc\"></div></div></div>
 <div class=\"bml\"><div class=\"bmr\"><div class=\"bmc\"></div></div></div><div class=\"bbl\"><div class=\"bbr\"><div class=\"bbc\"></div></div></div>
-</div><div class=\"button-contents\">Kiépítés ";
+</div><div class=\"button-contents\">Build to level ";
         }
 		echo $village->resarray['f'.$id]+1;
-		echo " szintre</div></div></button></div>";
+		echo " </div></div></button></div>";
     }
     else if($bindicate == 9) {
     	if($id <= 18) {
     	echo "<button type=\"button\" value=\"Upgrade level\" class=\"build\" onclick=\"window.location.href = 'dorf1.php?a=$id&c=$session->checker'; return false;\">
 <div class=\"button-container\"><div class=\"button-position\"><div class=\"btl\"><div class=\"btr\"><div class=\"btc\"></div></div></div>
 <div class=\"bml\"><div class=\"bmr\"><div class=\"bmc\"></div></div></div><div class=\"bbl\"><div class=\"bbr\"><div class=\"bbc\"></div></div></div>
-</div><div class=\"button-contents\">Kiépítés ";
+</div><div class=\"button-contents\">Build to level   ";
         }
         else {
         echo "<button type=\"button\" value=\"Upgrade level\" class=\"build\" onclick=\"window.location.href = 'dorf2.php?a=$id&c=$session->checker'; return false;\">
 <div class=\"button-container\"><div class=\"button-position\"><div class=\"btl\"><div class=\"btr\"><div class=\"btc\"></div></div></div>
 <div class=\"bml\"><div class=\"bmr\"><div class=\"bmc\"></div></div></div><div class=\"bbl\"><div class=\"bbr\"><div class=\"bbc\"></div></div></div>
-</div><div class=\"button-contents\">Kiépítés ";
+</div><div class=\"button-contents\">Build to level ";
         }
 		echo $village->resarray['f'.$id]+($loopsame > 0 ? 2:1);
-		echo "</div></div></button> <span class=\"none\">(put in turn making)</span></div>";
+		echo "</div></div></button> <span class=\"none\">(que)</span></div>";
     }
 }
 

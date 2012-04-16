@@ -1,6 +1,6 @@
-<h4 class="round">A legnagyobb falvak</h4>
+﻿<h4 class="round">Biggest Villages</h4>
 <table cellpadding="1" cellspacing="1" id="villages" class="row_table_data">
-	<thead><tr><td></td><td>Falu</td><td>Játékos</td><td>Lakos</td><td>Koordináták</td></tr></thead>
+	<thead><tr><td></td><td>Village</td><td>Owner</td><td>Population</td><td>Coordinate</td></tr></thead>
 <tbody>
 <?php
 $myrank = $ranking->getVillageRank($village->wid);
@@ -179,10 +179,10 @@ if(!isset($_GET['tid'])){ $_GET['tid']='1'; }
             <table class="transparent">
                 <tbody><tr>
                     <td>
-                        <span>Rang: <input type="text" class="text ra" maxlength="5" name="rank" value="" /></span>
+                        <span>Rank <input type="text" class="text ra" maxlength="5" name="rank" value="" /></span>
                     </td>
                     <td>
-                        <span>vagy név: <input type="text" class="text name" maxlength="20" name="name" value="<?php if(!is_numeric($search)) {echo $search; } ?>" /></span>
+                        <span>Name <input type="text" class="text name" maxlength="20" name="name" value="<?php if(!is_numeric($search)) {echo $search; } ?>" /></span>
                     </td>
                     <td>
                         <input type="hidden" name="ft" value="r<?php echo isset($_GET['tid'])? $_GET['tid'] : 1; ?>" />

@@ -1,12 +1,12 @@
- <?php
+﻿ <?php
     $trainlist = $technology->getTrainingList(4);
     if(count($trainlist) > 0) {
     	echo "
     <br /><table cellpadding=\"1\" cellspacing=\"1\" class=\"under_progress\">
 		<thead><tr>
-			<td>Kiképzés</td>
-			<td>Időtartam</td>
-			<td>Kész</td>
+			<td>Unit</td>
+			<td>Time</td>
+			<td>Finish</td>
 		</tr></thead>
 		<tbody>";
 		$TrainCount = 0;
@@ -25,7 +25,7 @@
 			$time = $generator->procMTime($train['commence']+($train['eachtime']*$train['amt']));
 			echo " ".$time[1]." óra";
 		} ?>
-		</tr><tr class="next"><td colspan="3">A következő egység <span id="timer2"><?php echo $NextFinished; ?></span> múlva lesz kész.</td></tr>
+		</tr><tr class="next"><td colspan="3">The Next Unit is ready in <span id="timer2"><?php echo $NextFinished; ?></span></td></tr>
 		</tbody></table>
     <?php }
 ?>

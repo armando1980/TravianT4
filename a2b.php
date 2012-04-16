@@ -102,7 +102,7 @@ if($message->unread) {
 <div class="clear"></div> 
 </div> 
 </div>
-					<div id="mid"><?php include("Templates/menu.tpl"); ?>
+					<div id="mid">
 						<a id="ingameManual" href="help.php" title="Útmutató">
 							<img src="img/x.gif" class="question" alt="Útmutató"/>
 						</a>

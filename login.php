@@ -197,10 +197,9 @@ Element.implement({
 				<div class="clear"></div>
 			</div>
 		</div>
-<div class="startsIn <?php echo $startin; ?>"><BR /><BR /><BR /><BR /><BR />
-<center><big><big><big> <?php echo LOGIN_SERVER_START; ?> </big></big></big></center>
-<BR />
-<center><big><big><big><b><font color=red><script language="JavaScript">
+<div class="startsIn <?php echo $startin; ?>"><BR /><BR /><BR />
+<?php echo LOGIN_SERVER_START; ?>
+<script language="JavaScript">
 TargetDate = "<?php echo START_DATE; ?> <?php echo START_TIME; ?>";
 CountActive = true;
 CountStepper = -1;
@@ -266,8 +265,8 @@ else
 gsecs = Math.floor(ddiff.valueOf()/1000);
 CountBack(gsecs);
 
-</script></font></b></big></big></big></center>
-</div>
+</script>
+ <?php echo LOGIN_SERVER_START2; ?></div>
 <div class="clear">&nbsp;</div>
 </div>
 <div class="clear"></div>

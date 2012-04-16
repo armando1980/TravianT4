@@ -160,8 +160,6 @@ if (@isset($_POST['confirm']))
 
 <div id="mid">
 
-<?php include("Templates/menu.tpl"); ?>
-
 
 
 <div id="content"  class="login">

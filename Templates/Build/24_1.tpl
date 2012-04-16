@@ -1,4 +1,4 @@
-<div class="clear"></div>
+﻿<div class="clear"></div>
 <?php
 $level = $village->resarray['f'.$id];
 $inuse = $database->getVillageField($village->wid, 'celebration');
@@ -12,8 +12,8 @@ echo "
                 <a href=\"#\" onclick=\"return Travian.Game.iPopup(24,4);\">
                 <img class=\"celebration celebrationSmall\" src=\"img/x.gif\" alt=\"Kis ünnepség\">
                 </a>
-                <a href=\"#\" onclick=\"return Travian.Game.iPopup(24,4);\">Kis ünnepség</a>
-                <span class=\"points\">(500 kultúrpont)</span>
+                <a href=\"#\" onclick=\"return Travian.Game.iPopup(24,4);\">Small Party</a>
+                <span class=\"points\">(500 Culture Points)</span>
             </div>
             <div class=\"costs\">
 				<div class=\"showCosts\">
@@ -32,20 +32,20 @@ echo "
                 </div>
 			</div>";
             if($inuse > $time){            
-                echo "<div class=\"contractLink\"><span class=\"none\">A Kis ünnepség már javában zajlik</span></div>";
+                echo "<div class=\"contractLink\"><span class=\"none\">A small celebration is in full swing</span></div>";
 			}
 			else if($cel[$i]['wood'] > $village->awood || $cel[$i]['clay'] > $village->aclay || $cel[$i]['iron'] > $village->airon || $cel[$i]['crop'] > $village->acrop) {
 				if($village->getProd("crop")>0){
 					$time = $technology->calculateAvaliable(24,$cel[$i]);
-					echo "<div class=\"contractLink\"><span class=\"none\">Elegendő nyersanyag ".$time[0]." -> ".$time[1]."</span></div>";
+					echo "<div class=\"contractLink\"><span class=\"none\">Enough resources at ~".$time[1]."</span></div>";
 				} else {
-					echo "<div class=\"contractLink\"><span class=\"none\">Negatív búzatermelés miatt soha nem lesz elég nyersanyag.</span></div>";
+					echo "<div class=\"contractLink\"><span class=\"none\">Wheat is negative ~ Upgrade wheat field</span></div>";
 				}
 			} else {
 				echo "
                 	<button type=\"button\" value=\"Ünnepelj\" class=\"build\" onclick=\"window.location.href = 'celebration.php?id=$id&type=$i'; return false;\"><div class=\"button-container\"><div class=\"button-position\"><div class=\"btl\"><div class=\"btr\"><div class=\"btc\"></div></div></div>
 <div class=\"bml\"><div class=\"bmr\"><div class=\"bmc\"></div></div></div><div class=\"bbl\"><div class=\"bbr\"><div class=\"bbc\"></div></div></div>
-</div><div class=\"button-contents\">Ünnepelj</div></div></button>";
+</div><div class=\"button-contents\">Celebrate</div></div></button>";
                 echo "</div><div class=\"clear\"></div></div></div>";
 
                 }
@@ -60,8 +60,8 @@ echo "
 <a href=\"#\" onclick=\"return Travian.Game.iPopup(24,4);\">
 <img class=\"celebration celebrationSmall\" src=\"img/x.gif\" alt=\"Nagy ünnepség\">
 </a>
-<a href=\"#\" onclick=\"return Travian.Game.iPopup(24,4);\">Nagy ünnepség</a>
-<span class=\"points\">(2000 kultúrpont)</span>
+<a href=\"#\" onclick=\"return Travian.Game.iPopup(24,4);\">Big Party</a>
+<span class=\"points\">(2000 Culture Points)</span>
 </div>
 <div class=\"costs\">
 				<div class=\"showCosts\">
@@ -80,7 +80,7 @@ echo "
                 </div>
                 </div>";
 if($inuse > $time){            
-echo "<div class=\"contractLink\"><span class=\"none\">A Nagy Ünnepség javában zajlik</span></div>";
+echo "<div class=\"contractLink\"><span class=\"none\">The Great Celebration in full swing</span></div>";
 					}
                   else if($cel[$i]['wood'] > $village->awood || $cel[$i]['clay'] > $village->aclay || $cel[$i]['iron'] > $village->airon || $cel[$i]['crop'] > $village->acrop) {
 					if($village->getProd("crop")>0){
@@ -94,7 +94,7 @@ echo "<div class=\"contractLink\"><span class=\"none\">A Nagy Ünnepség javába
                     echo "<button type=\"button\" value=\"Ünnepelj\" class=\"build\" onclick=\"window.location.href = 'celebration.php?id=$id&type=$i'; return false;\">
 <div class=\"button-container\"><div class=\"button-position\"><div class=\"btl\"><div class=\"btr\"><div class=\"btc\"></div></div></div>
 <div class=\"bml\"><div class=\"bmr\"><div class=\"bmc\"></div></div></div><div class=\"bbl\"><div class=\"bbr\"><div class=\"bbc\"></div></div></div>
-</div><div class=\"button-contents\">Ünnepelj</div></div></button>";
+</div><div class=\"button-contents\">Celebrate</div></div></button>";
                 }           
 echo "</div><div class=\"clear\"></div></div></div>";
                 }     

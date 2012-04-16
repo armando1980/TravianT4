@@ -44,7 +44,7 @@
 							<div class="contentTitle">&nbsp;</div>
 							<div class="contentContainer">
 								<div id="content" class="statistics">
-<h1 class="titleInHeader">Telepítés</h1>
+<h1 class="titleInHeader">نصب بازی</h1>
                 <?php 
                 if(!isset($_GET['s'])) {
                 include("templates/greet.tpl");

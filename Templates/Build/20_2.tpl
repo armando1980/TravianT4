@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 $success = 0;
 for($i=15;$i<=16;$i++) {
 	if($technology->getTech($i)) {
@@ -36,6 +36,6 @@ for($i=15;$i<=16;$i++) {
     }
     }
 if($success == 0) {
-	echo "<tr><td colspan=\"3\"><div class=\"none\"><center>Először képezz ki lovas egységeket az Akadémiában.</center></div></td></tr>";
+	echo "<tr><td colspan=\"3\"><div class=\"none\"><center>Units need to be researched in Academy.</center></div></td></tr>";
 }
 ?>

@@ -1,11 +1,12 @@
-<h1 class="titleInHeader">Városháza <span class="level">Szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
+﻿<h1 class="titleInHeader">Town Hall <span class="level">Level <?php echo $village->resarray['f'.$id]; ?></span></h1>
 
 <div id="build" class="gid24">
 <div class="build_desc">
 <a href="#" onClick="return Travian.Game.iPopup(24,4);" class="build_logo">
 	<img class="building big white g24" src="img/x.gif" alt="Városháza" title="Városháza" />
 </a>
-A városházán lehet ünnepségeket tartani, melyek növelik a kulturpontok számát.
+
+In the Town Hall you can hold pompous celebrations. Such a celebration increases your culture points.
 </div>
 
 <?php

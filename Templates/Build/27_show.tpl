@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
     $artefact = $database->getArtefactDetails($_GET['show']);
                     if($artefact['size'] == 1){
@@ -9,9 +9,9 @@
                        $effect = "All villages";
                    }  
                    if ($artefact['conquered'] >= (time()-86400)){
-                   $active = "Inaktív"; 
+                   $active = "Inactive"; 
                    }else{
-                    $active = "Aktív"; 
+                    $active = "Active"; 
                    }
 	
 ?>
@@ -27,7 +27,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>Az ereklye</th>
+                        <th>The Artefact</th>
                         <td>
                             <a href="spieler.php?uid=<?php echo $artefact['owner'];?>"><?php echo $database->getUserField($artefact['owner'],"username",0);?></a>
                         </td>
@@ -43,7 +43,7 @@
                         <td><a href="allianz.php?aid=<?php echo $database->getUserField($artefact['owner'],"alliance",0);?>"><?php echo $database->getAllianceName($database->getUserField($artefact['owner'],"alliance",0)); ?></a></td>
                     </tr> 
                     <tr>
-                        <th>Hatás</th>
+                        <th>Effect</th>
                         <td><?php echo $effect; ?></td>
                     </tr>
         
@@ -53,25 +53,25 @@
                 </tr>
                
             <tr>
-                <th>Kellő szint</th>
+                <th>Treasure Chamber</th>
                 <td>A kincstár <b><?php echo $reqlvl; ?></b></td>
             </tr>
         
                 <tr>
-                    <th>Dátum</th>
+                    <th>Date</th>
                     <td><?php echo date("Y.m.d. H:i",$artefact['conquered']);?></td>
                 </tr>
             
                 <tr>
-                    <th>Aktivációs idő</th>
+                    <th>Activity</th>
                     <td><?php echo $active;?></td>
                 </tr>
             </tbody></table><br />
-            <h4>Eddigi tulajok</h4>
+            <h4>Artefacts</h4>
                 <table class="art_details" cellpadding="1" cellspacing="1">
                     <thead>
                         <tr>
-                            <td>Játékos</td>
+                            <td>Player</td>
                             <td>Village containing inscriptions</td>
                             <td>Capture History</td>
                         </tr>

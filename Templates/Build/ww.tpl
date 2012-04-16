@@ -1,4 +1,4 @@
-<h1 class="titleInHeader">A világcsoda <span class="level">szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
+﻿<h1 class="titleInHeader">Wonder of the World <span class="level"> Level <?php echo $village->resarray['f'.$id]; ?></span></h1>
 
     <div id="build" class="gid40">
     <div class="build_desc">
@@ -15,21 +15,21 @@ $vref = $_SESSION['wid'];
 $wwname = $database->getWWName($vref);
 
 if($village->resarray['f99'] < 5){
-echo 'Ahhoz hogy elnevezhetsd a világcsodát el kell érned az 5-ös szintet. 
-			<center>Világcsoda neve: <input class="text" name="wwname" id="wwname" disabled="disabled" value="'.$wwname.'" maxlength="20"> 
+echo 'WW name. 
+			<center>Wonder of the World Name <input class="text" name="wwname" id="wwname" disabled="disabled" value="'.$wwname.'" maxlength="20"> 
 <button type="submit" value="ok" name="s1" id="btn_train" value="ok" class="startTraining" disabled="disabled">
                     <div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">OK</div></div>
                     </button>
 </center>';
 } else if($village->resarray['f99'] >= 5) {
-echo '<center><br />Világcsoda neve: <input class="text" name="wwname" id="wwname" value="'.$wwname.'" maxlength="20"> <button type="submit" value="ok" name="s1" id="btn_train" value="ok" class="startTraining">
+echo '<center><br />Wonder of the World Name: <input class="text" name="wwname" id="wwname" value="'.$wwname.'" maxlength="20"> <button type="submit" value="ok" name="s1" id="btn_train" value="ok" class="startTraining">
                     <div class="button-container"><div class="button-position"><div class="btl"><div class="btr"><div class="btc"></div></div></div><div class="bml"><div class="bmr"><div class="bmc"></div></div></div><div class="bbl"><div class="bbr"><div class="bbc"></div></div></div></div><div class="button-contents">OK</div></div>
                     </button></center>'; 
 } ?>
     </form>
 	<?php
     if(isset($_GET['n'])) {
-		echo '<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="Red"><b>A világcsoda neve megváltozott.</b></font>';
+		echo '<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="Red"><b>Wonder of the World name changed succesfully</b></font>';
 		  }
 		  ?>
 

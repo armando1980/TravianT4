@@ -1,22 +1,22 @@
-<h1 class="titleInHeader">Rezidencia <span class="level">Szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
+﻿<h1 class="titleInHeader">Residence <span class="level">Level <?php echo $village->resarray['f'.$id]; ?></span></h1>
 <div id="build" class="gid25">
 <div class="build_desc">
         <a href="#" onClick="return Travian.Game.iPopup(25,4, 'gid');" class="build_logo">
         <img class="building big white g25" src="img/x.gif" alt="Rezidencia" title="Rezidencia" /> </a>
-        A rezidencia egy kis kastély, ahol az uralkodó tartózkodik, ha látogatóba érkezik. A rezidencia megléte megakadályozza a támadókat, hogy elfoglalják a falut.</div>
+        The residence is a small palace, where the king or queen lives when (s)he visits the village. The residence protects the village against enemies who want to conquer it</div>
 
 <?php
 include("upgrade.tpl");
 include("25_menu.tpl"); ?>
-<h4>A falu terjeszkedése</h4>
+<h4>Expansions</h4>
 <table cellpadding="1" cellspacing="1" id="expansion">
 <thead>
 <tr>
-	<td colspan="2">Falu</td>
-	<td>Játékos</td>
-	<td>Népesség</td>
-	<td>Koordináta</td>
-	<td>Időpont</td>
+	<td colspan="2">Village</td>
+	<td>Players</td>
+	<td>Population</td>
+	<td>Coordinates</td>
+	<td>Date</td>
 </tr></thead>
 <tbody>
 <?php
@@ -46,7 +46,7 @@ echo '
 	}
 }
 else{
-echo '<tr><td colspan="6" class="none">Ebből a faluból még nem alapítottak/foglaltak el új falut.</td></tr>';
+echo '<tr><td colspan="6" class="none">No new villages have expanded from this Village.</td></tr>';
 }
 ?>
 </tbody></table></div>

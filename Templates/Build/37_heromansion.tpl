@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if($_GET['gid']==37 && isset($_GET['del'])){
 	$database->removeOases($_GET['del']);
     mysql_query("UPDATE ".TB_PREFIX."wdata SET occupied = 0 WHERE id = ".$_GET['del']."");
@@ -9,7 +9,7 @@ if($_GET['gid']==37 && isset($_GET['del'])){
 <h4>Elfoglalt oázisok <?php echo $village->vname; ?> faluval</h4>
 
 <table id="oasesOwned" cellpadding="1" cellspacing="1">
-	<thead><tr><td>Típus</td><td>Hűség</td><td>Elfogás ideje</td><td>Koordniáta</td><td>Hatás</td></tr></thead>
+	<thead><tr><td>Type</td><td>lOYALTY</td><td>Conquered</td><td>Coordinates</td><td>Resources</td></tr></thead>
 	<tbody>
 <?php
 $prefix = "".TB_PREFIX."odata";
@@ -42,22 +42,22 @@ switch($type) {
 case 1:
 case 2:
 case 3:
-$tname =  "Erdő";
+$tname =  "Wood";
 break;
 case 4:
 case 5:
 case 6:
-$tname =  "Agyag";
+$tname =  "Clay";
 break;
 case 7:
 case 8:
 case 9:
-$tname =  "Síkság";
+$tname =  "Iron";
 break;
 case 10:
 case 11:
 case 12:
-$tname =  "Hegység";
+$tname =  "Wheat";
 break;
 }
 ?>
@@ -70,38 +70,38 @@ break;
 $coor = $database->getCoor($wref);
 switch($type) {
 case 1:
-$tt =  "<span><img class='r1' src='img/x.gif' title='Fa'> 25%</span>";
+$tt =  "<span><img class='r1' src='img/x.gif' title='Wood'> 25%</span>";
 break;
 case 2:
-$tt =  "<span><img class='r1' src='img/x.gif' title='Fa'> 50%</span>";
+$tt =  "<span><img class='r1' src='img/x.gif' title='Wood'> 50%</span>";
 break;
 case 3:
-$tt =  "<span><img class='r1' src='img/x.gif' title='Fa'> 25%</span><span><img class='r4' src='img/x.gif' title='Búza'> 25%</span>";
+$tt =  "<span><img class='r1' src='img/x.gif' title='Wood'> 25%</span><span><img class='r4' src='img/x.gif' title='Wheat'> 25%</span>";
 break;
 case 4:
-$tt =  "<span><img class='r2' src='img/x.gif' title='Agyag'> 25%</span>";
+$tt =  "<span><img class='r2' src='img/x.gif' title='Clay'> 25%</span>";
 break;
 case 5:
-$tt =  "<span><img class='r2' src='img/x.gif' title='Agyag'> 50%</span>";
+$tt =  "<span><img class='r2' src='img/x.gif' title='Clay'> 50%</span>";
 break;
 case 6:
-$tt =  "<span><img class='r2' src='img/x.gif' title='Agyag'> 25%</span><span><img class='r4' src='img/x.gif' title='Búza'> 25%</span>";
+$tt =  "<span><img class='r2' src='img/x.gif' title='Clay'> 25%</span><span><img class='r4' src='img/x.gif' title='Wheat'> 25%</span>";
 break;
 case 7:
-$tt =  "<span><img class='r3' src='img/x.gif' title='Vasérc'> 25%</span>";
+$tt =  "<span><img class='r3' src='img/x.gif' title='iron'> 25%</span>";
 break;
 case 8:
-$tt =  "<span><img class='r3' src='img/x.gif' title='Vasérc'> 50%</span>";
+$tt =  "<span><img class='r3' src='img/x.gif' title='iron'> 50%</span>";
 break;
 case 9:
-$tt =  "<span><img class='r3' src='img/x.gif' title='Vasérc'> 25%</span><span><img class='r4' src='img/x.gif' title='Búza'> 25%</span>";
+$tt =  "<span><img class='r3' src='img/x.gif' title='iron'> 25%</span><span><img class='r4' src='img/x.gif' title='wheat'> 25%</span>";
 break;
 case 10:
 case 11:
-$tt =  "<span><img class='r4' src='img/x.gif' title='Búza'> 25%</span>";
+$tt =  "<span><img class='r4' src='img/x.gif' title='wheat'> 25%</span>";
 break;
 case 12:
-$tt =  "<span><img class='r4' src='img/x.gif' title='Búza'> 50%</span>";
+$tt =  "<span><img class='r4' src='img/x.gif' title='wheat'> 50%</span>";
 break;
 }
 ?>
@@ -120,9 +120,9 @@ break;
                 </tbody></table>
 <?php
 	if($query == 0){
-    	echo '<div class="nextOases none">1. آبادی بعدی از Hősök háza Szint 10</div><div class="nextOases none">2. آبادی بعدی از Hősök háza Szint 15</div><div class="nextOases none">3. آبادی بعدی از Hősök háza Szint 20</div>';
+    	echo '<div class="nextOases none">1. Next Oasis from Hero´s Mansion 10</div><div class="nextOases none">2. Next Oasis from Hero´s Mansion 15</div><div class="nextOases none">3. Next Oasis from Hero´s Mansion 20</div>';
 	}if($query == 1){
-    	echo '<div class="nextOases none">2. آبادی بعدی از Hősök háza Szint 15</div><div class="nextOases none">3. آبادی بعدی از Hősök háza Szint 20</div>';
+    	echo '<div class="nextOases none">2. Next Oasis from Hero´s Mansion 20</div><div class="nextOases none">3. آبادی بعدی از Hősök háza Szint 20</div>';
 	}elseif($query == 2){
     	echo '<div class="nextOases none">3. آبادی بعدی از Hősök háza Szint 20</div>';
     }else{
@@ -131,12 +131,12 @@ break;
 ?>
 
 
-<h4 class="spacer">Egyéb oázisok</h4>
+<h4 class="spacer">Other oasis </h4>
 
 
 
 <table id="oasesSurround" cellpadding="1" cellspacing="1">
-	<thead><tr><td>Típus</td><td>Játékos</td><td>Falu</td><td>Koordináta</td><td>Hatás</td></tr></thead>
+	<thead><tr><td>Type</td><td>Owner</td><td>Village</td><td>Coordinates</td><td>Resource</td></tr></thead>
     <tbody>
 <?php
     $getoasis = mysql_query("SELECT * FROM ".TB_PREFIX."wdata WHERE oasistype > 0");
@@ -171,22 +171,22 @@ break;
                 case 1:
                 case 2:
                 case 3:
-                $tname =  "Erdő";
+                $tname =  "Wood";
                 break;
                 case 4:
                 case 5:
                 case 6:
-                $tname =  "Agyag";
+                $tname =  "Clay";
                 break;
                 case 7:
                 case 8:
                 case 9:
-                $tname =  "Síkság";
+                $tname =  "Iron";
                 break;
                 case 10:
                 case 11:
                 case 12:
-                $tname =  "Hegység";
+                $tname =  "wheat";
                 break;
             }
             echo "<a href=\"karte.php?d=".$row2['id']."&c=".$generator->getMapCheck($row2['id'])."\">".$tname."</a></td>";
@@ -212,38 +212,38 @@ break;
             echo "</td>";
             switch($basearray['type']) {
                 case 1:
-                $ttt =  "<span><img class='r1' src='img/x.gif' title='Fa'> 25%</span>";
+                $ttt =  "<span><img class='r1' src='img/x.gif' title='Wood'> 25%</span>";
                 break;
                 case 2:
-                $ttt =  "<span><img class='r1' src='img/x.gif' title='Fa'> 50%</span>";
+                $ttt =  "<span><img class='r1' src='img/x.gif' title='Wood'> 50%</span>";
                 break;
                 case 3:
-                $ttt =  "<span><img class='r1' src='img/x.gif' title='Fa'> 25%</span><span><img class='r4' src='img/x.gif' title='Búza'> 25%</span>";
+                $ttt =  "<span><img class='r1' src='img/x.gif' title='Wood'> 25%</span><span><img class='r4' src='img/x.gif' title='Wheat'> 25%</span>";
                 break;
                 case 4:
-                $ttt =  "<span><img class='r2' src='img/x.gif' title='Agyag'> 25%</span>";
+                $ttt =  "<span><img class='r2' src='img/x.gif' title='Clay'> 25%</span>";
                 break;
                 case 5:
-                $ttt =  "<span><img class='r2' src='img/x.gif' title='Agyag'> 50%</span>";
+                $ttt =  "<span><img class='r2' src='img/x.gif' title='Clay'> 50%</span>";
                 break;
                 case 6:
-                $ttt =  "<span><img class='r2' src='img/x.gif' title='Agyag'> 25%</span><span><img class='r4' src='img/x.gif' title='Búza'> 25%</span>";
+                $ttt =  "<span><img class='r2' src='img/x.gif' title='Clay'> 25%</span><span><img class='r4' src='img/x.gif' title='Wheat'> 25%</span>";
                 break;
                 case 7:
-                $ttt =  "<span><img class='r3' src='img/x.gif' title='Vasérc'> 25%</span>";
+                $ttt =  "<span><img class='r3' src='img/x.gif' title='Iron'> 25%</span>";
                 break;
                 case 8:
-                $ttt =  "<span><img class='r3' src='img/x.gif' title='Vasérc'> 50%</span>";
+                $ttt =  "<span><img class='r3' src='img/x.gif' title='Iron'> 50%</span>";
                 break;
                 case 9:
-                $ttt =  "<span><img class='r3' src='img/x.gif' title='Vasérc'> 25%</span><span><img class='r4' src='img/x.gif' title='Búza'> 25%</span>";
+                $ttt =  "<span><img class='r3' src='img/x.gif' title='Iron'> 25%</span><span><img class='r4' src='img/x.gif' title='Búza'> 25%</span>";
                 break;
                 case 10:
                 case 11:
-                $ttt =  "<span><img class='r4' src='img/x.gif' title='Búza'> 25%</span>";
+                $ttt =  "<span><img class='r4' src='img/x.gif' title='Wheat'> 25%</span>";
                 break;
                 case 12:
-                $ttt =  "<span><img class='r4' src='img/x.gif' title='Búza'> 50%</span>";
+                $ttt =  "<span><img class='r4' src='img/x.gif' title='Wheat'> 50%</span>";
                 break;
             }
             echo "<td class=\"res\">".$ttt."</td>";

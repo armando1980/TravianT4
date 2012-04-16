@@ -1,10 +1,10 @@
-<h1 class="titleInHeader">Gyakorlótér <span class="level">szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
+﻿<h1 class="titleInHeader">Tournament Square <span class="level"> level <?php echo $village->resarray['f'.$id]; ?></span></h1>
 <div id="build" class="gid14">
 <div class="build_desc">
 <a href="#" onClick="return Travian.Game.iPopup(14,4);" class="build_logo">
 <img class="building big white g14" src="img/x.gif" alt="Gyakorlótér" title="Gyakorlótér" />
 </a>
-A gyakorlótéren a csapataid kitartását tudod növelni. Magasabb szintű épület esetén a katonáid gyorsabban tesznek meg minden utat, amely végcélja minimálisan 20 négyzet távolságra van.
+At the tournament square, your troops can improve their stamina. The higher the level, the faster your troops will move when further than 20 fields away.
 </div>
 
 	<table cellpadding="1" cellspacing="1" id="build_value">

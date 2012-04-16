@@ -1,10 +1,10 @@
-<h1 class="titleInHeader">Kincstár <span class="level">Szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
+﻿<h1 class="titleInHeader">Treasure Chamber <span class="level">Level <?php echo $village->resarray['f'.$id]; ?></span></h1>
 
     <div id="build" class="gid27">
     <div class="build_desc">
         <a href="#" onClick="return Travian.Game.iPopup(27,4);" class="build_logo">
         <img class="building big white g27" src="img/x.gif" alt="Kincstár" title="Kincstár"></a>
-        A birodalmad kincsei a kincstárban raktározódnak . Ha eléri a 10-es szintet akkor ereklyét tudsz benne tárolni. </div>
+        The riches of your empire are kept in the treasure chamber. In each treasure chamber level 10 or higher, there is room for one artifact. After you have captured an artifact it takes 24 hours to be effective, except on speed servers where it only takes 12 hours </div>
         <?php
         include("upgrade.tpl");
         include("27_menu.tpl");

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
         $artefact = $database->getOwnArtefactInfo($village->wid);
         $result = mysql_num_rows(mysql_query("SELECT * FROM " . TB_PREFIX . "artefacts WHERE vref = " . $village->wid . ""));
@@ -18,14 +18,14 @@
    }
 ?>
 <div class="gid27">
-<h4 class="round">Saját ereklyék</h4>
+<h4 class="round">Your Artefacts</h4>
     <table id="own" cellpadding="1" cellspacing="1">
         <thead>
             <tr>
                 <td></td>
-                <td>Ereklye neve</td>
-                <td>Falu</td>
-                <td>Dátum</td>
+                <td>Artefact Name</td>
+                <td>Village</td>
+                <td>Date</td>
             </tr>
         </thead>
 
@@ -34,7 +34,7 @@
             <?php
 
         if($result == 0) {
-        	echo '<td colspan="4" class="none">Nincsenek ereklyéid.</td>';
+        	echo '<td colspan="4" class="none">You own no artefacts</td>';
         } else {
         	if($artefact['size'] == 1) {
         		$reqlvl = 10;
@@ -58,17 +58,17 @@
             </tr>
         </tbody>
     </table>
-<br /><h4 class="round">Ereklyék körülötted</h4>
+<br /><h4 class="round">Artefacts Nearby</h4>
     <table id="near" cellpadding="1" cellspacing="1">
         <thead>
             <tr>
                 <td></td>
 
-                <td>Ereklye neve</td>
+                <td>Artefact Name</td>
 
-                <td>Játékos</td>
+                <td>Player</td>
 
-                <td>Távolság</td>
+                <td>Distance</td>
             </tr>
         </thead>
 

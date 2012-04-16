@@ -102,7 +102,6 @@ if($message->unread) {
 </div> 
 </div>
 					<div id="mid">
-<?php include("Templates/menu.tpl"); ?>
 
 												<div class="clear"></div> 
 						<div id="contentOuterContainer"> 

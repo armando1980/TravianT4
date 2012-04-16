@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('Asia/Tehran');
+date_default_timezone_set('Europe/Budapest');
 
 include("Session.php");
 include("Building.php");
@@ -90,10 +90,10 @@ class Village {
         $upkeep = $technology->getUpkeep($this->unitall,0);
 		$heroData = $database->getHeroData($session->uid);
 		if($heroData['dead']==0 && $this->capital){
-			$hwood = $heroData['r1']*10*SPEED;
-			$hclay = $heroData['r2']*10*SPEED;
-			$hiron = $heroData['r3']*10*SPEED;
-			$hcrop = $heroData['r4']*10*SPEED;
+			$hwood = $heroData['r1'];
+			$hclay = $heroData['r2'];
+			$hiron = $heroData['r3'];
+			$hcrop = $heroData['r4'];
 			$hproduct = $heroData['r0'];
 		}
 		

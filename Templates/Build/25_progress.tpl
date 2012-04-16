@@ -1,12 +1,12 @@
- <?php
+﻿ <?php
     $trainlist = $technology->getTrainingList(4);
     if(count($trainlist) > 0) {
     	echo "
     <br /><table cellpadding=\"1\" cellspacing=\"1\" class=\"under_progress\">
 		<thead><tr>
-			<td>Kiképzés</td>
-			<td>Időtartam</td>
-			<td>Kész</td>
+			<td>training</td>
+			<td>period</td>
+			<td>ready</td>
 		</tr></thead>
 		<tbody>";
 		$TrainCount = 0;

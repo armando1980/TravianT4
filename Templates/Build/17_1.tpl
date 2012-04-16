@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if(isset($_GET['u'])) {
 $u = $_GET['u'];
 }
@@ -6,24 +6,24 @@ else {
 $u=0;
 }
 ?>
-<h1 class="titleInHeader">Piac <span class="level">szint <?php echo $village->resarray['f'.$id]; ?></span></h1>
+<h1 class="titleInHeader">Market <span class="level">Level <?php echo $village->resarray['f'.$id]; ?></span></h1>
 <div id="build" class="gid17">
 <div class="build_desc">
 <a href="#" onClick="return Travian.Game.iPopup(17,4);" class="build_logo"> 
     <img class="building big white g17" src="img/x.gif" alt="Piac" title="Piac" /> 
 </a> 
-A piacon keresztül tudsz más játékosokkal kereskedni. Az épület szintje dönti el, egyszerre mennyi kereskedő áll rendelkezésedre.</div> 
+At the marketplace you can trade resources with other players. The higher its level, the more resources can be transported at the same time.</div> 
 <?php
 include("upgrade.tpl");
 include("17_menu.tpl");
 if($session->plus) {
 ?>
-<div class="boxes boxesColor gray traderCount"><div class="boxes-tl"></div><div class="boxes-tr"></div><div class="boxes-tc"></div><div class="boxes-ml"></div><div class="boxes-mr"></div><div class="boxes-mc"></div><div class="boxes-bl"></div><div class="boxes-br"></div><div class="boxes-bc"></div><div class="boxes-contents">Kereskedő <?php echo $market->merchant; ?> / <?php echo $market->merchantAvail(); ?></div>
+<div class="boxes boxesColor gray traderCount"><div class="boxes-tl"></div><div class="boxes-tr"></div><div class="boxes-tc"></div><div class="boxes-ml"></div><div class="boxes-mr"></div><div class="boxes-mc"></div><div class="boxes-bl"></div><div class="boxes-br"></div><div class="boxes-bc"></div><div class="boxes-contents">Merchants <?php echo $market->merchant; ?> / <?php echo $market->merchantAvail(); ?></div>
 				</div><div class="clear"></div>
 <div class="boxes boxesColor gray search_select"><div class="boxes-tl"></div><div class="boxes-tr"></div><div class="boxes-tc"></div><div class="boxes-ml"></div><div class="boxes-mr"></div><div class="boxes-mc"></div><div class="boxes-bl"></div><div class="boxes-br"></div><div class="boxes-bc"></div><div class="boxes-contents"><table id="search_select" class="buy_select transparent" cellpadding="1" cellspacing="1">
 	<thead>
 		<tr>
-			<td colspan="4">Keres</td>
+			<td colspan="4">I'm Searching</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -68,7 +68,7 @@ if($session->plus) {
 <div class="boxes boxesColor gray bid_select"><div class="boxes-tl"></div><div class="boxes-tr"></div><div class="boxes-tc"></div><div class="boxes-ml"></div><div class="boxes-mr"></div><div class="boxes-mc"></div><div class="boxes-bl"></div><div class="boxes-br"></div><div class="boxes-bc"></div><div class="boxes-contents">
 <table id="bid_select" class="buy_select transparent" cellpadding="1" cellspacing="1">
 <thead><tr>
-<td colspan="4">Vesz</td>
+<td colspan="4">I'm Offering</td>
 </tr></thead>
 <tbody>
 <tr>
@@ -101,12 +101,12 @@ if($session->plus) {
 <table id="range" cellpadding="1" cellspacing="1">
 	<thead>
 		<tr>
-			<th>Ajánlat</th>
-			<th><img src="img/x.gif" class="ratio" alt="Arány"></th>
-			<th>Keres</th>
-			<th>Játékos</th>
-			<th>Időtartam</th>
-			<th>Elfogad</th>
+			<th>Offeredt</th>
+			<th><img src="img/x.gif" class="ratio" alt="Ratio"></th>
+			<th>Searched</th>
+			<th>Players</th>
+			<th>Duration</th>
+			<th>Action</th>
 		</tr>
 	</thead>
 <tbody>
@@ -146,10 +146,10 @@ switch($market->onsale[$i]['gtype']) {
       </div>
       </td><td class=\"val\">";
     switch($market->onsale[$i]['wtype']) {
-    case 1: echo "<img src=\"img/x.gif\" class=\"r1\" alt=\"Fa\" title=\"Fa\" /> "; break;
-    case 2: echo "<img src=\"img/x.gif\" class=\"r2\" alt=\"Agyag\" title=\"Agyag\" /> "; break;
-    case 3: echo "<img src=\"img/x.gif\" class=\"r3\" alt=\"Vasérc\" title=\"Vasérc\" /> "; break;
-    case 4: echo "<img src=\"img/x.gif\" class=\"r4\" alt=\"Búza\" title=\"Búza\" /> "; break;
+    case 1: echo "<img src=\"img/x.gif\" class=\"r1\" alt=\"Fa\" title=\"Wood\" /> "; break;
+    case 2: echo "<img src=\"img/x.gif\" class=\"r2\" alt=\"Agyag\" title=\"Clay\" /> "; break;
+    case 3: echo "<img src=\"img/x.gif\" class=\"r3\" alt=\"Vasérc\" title=\"Iron\" /> "; break;
+    case 4: echo "<img src=\"img/x.gif\" class=\"r4\" alt=\"Búza\" title=\"Wheat\" /> "; break;
     }
     echo $market->onsale[$i]['wamt'];
     echo "</td><td class=\"pla\">";
@@ -168,14 +168,14 @@ switch($market->onsale[$i]['gtype']) {
     <button type=\"button\" class=\"build\" onclick=\"window.location.href = 'build.php?id=$id&t=1&a=".$session->mchecker."&g=".$market->onsale[$i]['id']."'; return false;\">
 <div class=\"button-container\"><div class=\"button-position\"><div class=\"btl\"><div class=\"btr\"><div class=\"btc\"></div></div></div>
 <div class=\"bml\"><div class=\"bmr\"><div class=\"bmc\"></div></div></div><div class=\"bbl\"><div class=\"bbr\"><div class=\"bbc\"></div></div></div>
-</div><div class=\"button-contents\">Elfogadás</div></div></button></td>";
+</div><div class=\"button-contents\">Accpet Offer</div></div></button></td>";
     }
     echo"</tr>";
     }
 }
 }
 else {
-echo "<tr><td class=\"none\" colspan=\"6\"><center>Nincs ilyen alánlat.</center></td></tr>";
+echo "<tr><td class=\"none\" colspan=\"6\"><center>No Offers Currently</center></td></tr>";
 }
 ?>
 </tbody></table>
@@ -193,7 +193,7 @@ if(!isset($_GET['u']) && count($market->onsale) < 40) {
          echo "<a href=\"build.php?id=$id&t=1&u=".($_GET['u']+40)."\">&laquo;</a> Oldalak <a href=\"build.php?id=$id&t=1&u=".($_GET['u']+40)."\">&raquo;</a>";
          }
          else if(count($market->onsale) > $_GET['u']+40) {
-         	echo "<span class=\"none\"><b>&laquo;</b></span> Oldalak <a href=\"build.php?id=$id&t=1&u=".($_GET['u']+40)."\">&raquo;</a>";
+         	echo "<span class=\"none\"><b>&laquo;</b></span> Pages <a href=\"build.php?id=$id&t=1&u=".($_GET['u']+40)."\">&raquo;</a>";
          }
         else {
         echo "<a href=\"build.php?id=$id&t=1&u=".($_GET['u']-40)."\">&laquo;</a> Oldalak <span class=\"none\"><b>&raquo;</b></span>";

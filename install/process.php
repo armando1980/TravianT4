@@ -1,5 +1,6 @@
 <?php
 
+date_default_timezone_set('Asia/Tehran');
         if(file_exists("include/constant.php") && file_exists("include/connection.php")) {
         	include ("include/database.php");
         }
@@ -25,7 +26,7 @@
         	function constForm() {
 				global $database;
         		$myFile = "include/constant.php";
-        		$fh = fopen($myFile, 'w') or die("<br/><br/><br/>Nem sikerült megnyitni: install\include\constant.php");
+        		$fh = fopen($myFile, 'w') or die("<br/><br/><br/>Can't open file: install\include\constant.php");
         		$text = file_get_contents("data/constant_format.tpl");
         		$text = preg_replace("'%UTRACK%'", $_POST['trackusers'], $text);
         		$text = preg_replace("'%UTOUT%'", $_POST['timeout'], $text);
@@ -48,7 +49,7 @@
 				fclose($fh);
 				
 				$myFile = "include/connection.php";
-        		$fh = fopen($myFile, 'w') or die("<br/><br/><br/>Nem sikerült megnyitni: install\include\connection.php");
+        		$fh = fopen($myFile, 'w') or die("<br/><br/><br/>Can't open file: install\include\connection.php");
         		$text = file_get_contents("data/connection.tpl");
         		$text = preg_replace("'%SSERVER%'", $_POST['sserver'], $text);
         		$text = preg_replace("'%SUSER%'", $_POST['suser'], $text);
