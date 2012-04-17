@@ -2954,7 +2954,6 @@ break;
 				$ddd = rand(0,3);
 				if($ddd == 1){ $dif = 1; }else{ $dif = 0; }
 				$sql = mysql_query("SELECT * FROM ".TB_PREFIX."wdata ORDER BY id DESC LIMIT 1");
-				$query = mysql_query($sql, $this->connection);
 				$lastw = 641601;
 				if(($wref-10000)<=10){
 					$w1 = rand(10,($wref+10000));

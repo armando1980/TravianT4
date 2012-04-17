@@ -20,10 +20,10 @@ ob_start();
 		<?php if($hero['itempower']==0){ ?>
   <div class="attribute power tooltip" title="Fighting Strength Combines with your heros defence and offense. The higher the Fighting strength the better in battle.<br><font color='#5dcbfb'>Fighting Strength: <?php echo $hero['power']; ?> Bonus</font>">
 			<?php }else{ ?>
-  <div class="attribute power tooltip" title="Fighting Strength Combines with your heros defence and offense. The higher the Fighting strength the better in battle.<br><font color='#5dcbfb'>Fighting Strength: <?php echo 100+$tp*$hero['power'] ?> Bonus + <?php echo $hero['itempower'] ?> Bouns From Items</font>">
+  <div class="attribute power tooltip" title="Fighting Strength Combines with your heros defence and offense. The higher the Fighting strength the better in battle.<br><font color='#5dcbfb'>Fighting Strength: <?php echo 100+$tp*$hero['power']; ?> Bonus + <?php echo $hero['itempower']; ?> Bouns From Items</font>">
 			<?php } ?>
 			<div class="element attribName">Fighting Strength</div>
-			<div class="element current power"><?php echo 100+$tp*$hero['power'] ?></div>
+			<div class="element current power"><?php echo 100+$tp*$hero['power']+$hero['itempower']; ?></div>
 			<div class="element progress">
 				<div class="bar-bg">
 					<div class="bar" style="width:<?php echo $hero['power']; ?>%;"></div>
